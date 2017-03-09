@@ -1,0 +1,30 @@
+{
+  "name": "conscious-pool",
+  "version": "1.0.0",
+  "description": "A collective featuring musicians, artists, visionaries, and creators",
+  "main": "gulpfile.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {
+    "foundation-sites": "^6.3.1",
+    "gulp-browser": "^3.0.4",
+    "gulp-sass": "^3.1.0",
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leowolf749/conscious-pool.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leowolf749/conscious-pool/issues"
+  },
+  "homepage": "https://github.com/leowolf749/conscious-pool#readme"
+}
