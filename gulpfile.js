@@ -1,40 +1,34 @@
-let gulp = require('gulp');
-let sass = require ('gulp-sass');
-let browser = require('gulp-browser');
-
-gulp.task('default', ['html', 'css', 'js', 'assets']);
-
-gulp.task('html', function() {
+const gulp = require('gulp');
+const sass = require('gulp-sass');
+const browser = require('gulp-browser');
+gulp.task('default', ['html', 'css', 'js']);
+gulp.task('html', () => {
     gulp.src('templates/*.html')
         .pipe(gulp.dest('docs/templates'));
-
-    return gulp.src('index.html')
+    gulp.src('assets/*')
+        .pipe(gulp.dest('docs/'));
+    return gulp.src('*.html')
         .pipe(gulp.dest('docs/'));
 });
-
-gulp.task('css', function() {
+gulp.task('css', () => {
     return gulp.src('scss/style.scss')
-        .pipe(sass()) 
+        .pipe(sass())
         .pipe(gulp.dest('docs/'));
 });
+gulp.task('js', () => {
+    gulp.src('js/*/*.js')
+        .pipe(browser.browserify())
+        .pipe(gulp.dest('docs/js'));
 
-gulp.task('js', function() {
     return gulp.src('js/app.js')
-        .pipe(browser.browserify()) 
-        .pipe(gulp.dest('docs/'));
+        .pipe(browser.browserify())
+        .pipe(gulp.dest('docs/js'));
 });
-
-gulp.task('assets', function() {
-    return gulp.src(['assets/*.ico', 'assets/*.jpg', 'assets/*.png', 'assets/*.pdf'])
-        .pipe(gulp.dest('docs/assets'));
-});
-
-gulp.task('watch', ['default'], function() {
-    gulp.watch('*.html', ['html']);
-    gulp.watch('templates/*.html', ['html']);
-    gulp.watch('scss/*.scss', ['css']);
-    gulp.watch('scss/partials/*.scss', ['css']);
+gulp.task('watch', ['default'], () => {
     gulp.watch('js/*.js', ['js']);
     gulp.watch('js/*/*.js', ['js']);
-    gulp.watch('assets/**.*', ['assets']);
+    gulp.watch('scss/*.scss', ['css']);
+    gulp.watch('*.html', ['html']);
+    gulp.watch('templates/*.html', ['html']);
+    gulp.watch('assets/*', ['html']);
 });
