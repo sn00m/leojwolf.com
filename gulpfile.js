@@ -16,13 +16,9 @@ gulp.task('css', () => {
         .pipe(gulp.dest('docs/'));
 });
 gulp.task('js', () => {
-    gulp.src('js/*/*.js')
-        .pipe(browser.browserify())
-        .pipe(gulp.dest('docs/js'));
-
     return gulp.src('js/app.js')
         .pipe(browser.browserify())
-        .pipe(gulp.dest('docs/js'));
+        .pipe(gulp.dest('docs/'));
 });
 gulp.task('watch', ['default'], () => {
     gulp.watch('js/*.js', ['js']);

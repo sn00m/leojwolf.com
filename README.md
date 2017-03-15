@@ -1,2 +1,2 @@
 # conscious-pool
-A collective featuring musicians, artists, visionaries, and creators
+An art collective featuring musicians, artists, visionaries, and creators

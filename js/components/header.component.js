@@ -1,6 +1,6 @@
 module.exports = {
     name: 'headerSection',
     object: {
-        templateUrl: '../templates/header.html',
+        templateUrl: 'templates/header.html',
     }
 }
