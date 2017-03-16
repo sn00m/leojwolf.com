@@ -5,16 +5,31 @@ const app = angular.module ('ConsciousPool', [
 
 const components = [
     require('./components/header.component'),
+    require('./components/home.component'),
 ];
 
 for (let i = 0; i < components.length; i++) {
     app.component(components[i].name, components[i].object);
 };
-},{"./components/header.component":2}],2:[function(require,module,exports){
+
+app.config(function ($stateProvider){
+    $stateProvider.state({
+        name: 'home',
+        url: '/',
+    });
+});
+},{"./components/header.component":2,"./components/home.component":3}],2:[function(require,module,exports){
 module.exports = {
     name: 'headerSection',
     object: {
         templateUrl: 'templates/header.html',
+    }
+}
+},{}],3:[function(require,module,exports){
+module.exports = {
+    name: 'home',
+    object: {
+        templateUrl: 'templates/home.html',
     }
 }
 },{}]},{},[1]);
