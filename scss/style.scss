@@ -3,3 +3,15 @@
 @include foundation-global-styles;
 @include foundation-grid;
 
+body {
+    max-width: 100%;
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+}
+
+// Partials --------------------------------------
+@import 'partials/header';
+@import 'partials/footer';

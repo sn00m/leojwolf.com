@@ -1257,3 +1257,53 @@ pre {
       margin-bottom: 1.875rem; }
       .column-block > :last-child {
         margin-bottom: 0; } }
+
+body {
+  max-width: 100%; }
+  body a {
+    text-decoration: none;
+    color: black; }
+
+nav {
+  max-width: 75rem;
+  margin-right: auto;
+  margin-left: auto; }
+  nav::before, nav::after {
+    display: table;
+    content: ' '; }
+  nav::after {
+    clear: both; }
+  nav #logo {
+    width: 33.33333%;
+    float: left;
+    padding-right: 0.625rem;
+    padding-left: 0.625rem;
+    font-size: .85em; }
+    @media print, screen and (min-width: 40em) {
+      nav #logo {
+        padding-right: 0.9375rem;
+        padding-left: 0.9375rem; } }
+    nav #logo:last-child:not(:first-child) {
+      float: right; }
+  nav #nav-links {
+    width: 50%;
+    float: left;
+    padding-right: 0.625rem;
+    padding-left: 0.625rem; }
+    @media print, screen and (min-width: 40em) {
+      nav #nav-links {
+        padding-right: 0.9375rem;
+        padding-left: 0.9375rem; } }
+    nav #nav-links:last-child:not(:first-child) {
+      float: right; }
+    nav #nav-links ul {
+      margin-top: 25px;
+      padding: 0px; }
+      nav #nav-links ul li {
+        list-style-type: none;
+        display: inline;
+        margin-right: 20px; }
+
+footer {
+  text-align: center;
+  font-size: .7em; }

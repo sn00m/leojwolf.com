@@ -1,0 +1,23 @@
+nav {
+    @include grid-row();
+
+    #logo {
+        @include grid-column(4);
+        font-size: .85em;
+    }
+
+    #nav-links {
+        @include grid-column(6);
+        
+        ul {
+            margin-top: 25px;
+            padding: 0px;
+
+            li {
+                list-style-type: none;
+                display: inline;
+                margin-right: 20px;
+            }
+        }
+    }
+}
