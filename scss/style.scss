@@ -3,6 +3,10 @@
 @include foundation-global-styles;
 @include foundation-grid;
 
+// Global styles ---------------------------------
+$primary-font-type: 'Josefin Sans', sans-serif;
+$secondary-font-type: 'Lato', sans-serif; 
+
 body {
     max-width: 100%;
 

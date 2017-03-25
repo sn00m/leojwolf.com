@@ -4,10 +4,12 @@ nav {
     #logo {
         @include grid-column(4);
         font-size: .85em;
+        font-family: $primary-font-type;
     }
 
     #nav-links {
         @include grid-column(6);
+        font-family: $secondary-font-type;
         
         ul {
             margin-top: 25px;

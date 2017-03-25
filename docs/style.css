@@ -1278,7 +1278,8 @@ nav {
     float: left;
     padding-right: 0.625rem;
     padding-left: 0.625rem;
-    font-size: .85em; }
+    font-size: .85em;
+    font-family: "Josefin Sans", sans-serif; }
     @media print, screen and (min-width: 40em) {
       nav #logo {
         padding-right: 0.9375rem;
@@ -1289,7 +1290,8 @@ nav {
     width: 50%;
     float: left;
     padding-right: 0.625rem;
-    padding-left: 0.625rem; }
+    padding-left: 0.625rem;
+    font-family: "Lato", sans-serif; }
     @media print, screen and (min-width: 40em) {
       nav #nav-links {
         padding-right: 0.9375rem;
@@ -1306,4 +1308,5 @@ nav {
 
 footer {
   text-align: center;
-  font-size: .7em; }
+  font-size: .7em;
+  font-family: "Lato", sans-serif; }
