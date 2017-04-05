@@ -1300,13 +1300,34 @@ nav {
       float: right; }
     nav #nav-links ul {
       margin-top: 25px;
-      padding: 0px; }
+      padding: 0px;
+      text-align: center; }
       nav #nav-links ul li {
         list-style-type: none;
         display: inline;
+        margin: 0 auto;
         margin-right: 20px; }
+  nav #social-media {
+    width: 16.66667%;
+    float: left;
+    padding-right: 0.625rem;
+    padding-left: 0.625rem;
+    margin-top: 25px; }
+    @media print, screen and (min-width: 40em) {
+      nav #social-media {
+        padding-right: 0.9375rem;
+        padding-left: 0.9375rem; } }
+    nav #social-media:last-child:not(:first-child) {
+      float: right; }
+    nav #social-media #sm-link {
+      width: 25px; }
+
+.hero {
+  height: 570px;
+  background-image: url("rain-water.jpg"); }
 
 footer {
   text-align: center;
   font-size: .7em;
-  font-family: "Lato", sans-serif; }
+  font-family: "Lato", sans-serif;
+  padding: 20px; }
