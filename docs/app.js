@@ -59,7 +59,6 @@ module.exports = {
     name: 'ArtistsController',
     func: function ($scope) {
         $scope.load = () => {
-            // console.log('load');
             const artists = [
                 {
                     name: 'snoom',

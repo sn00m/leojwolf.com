@@ -1,4 +1,23 @@
 .artists-page {
     width: 90%;
     margin: 0 auto;
+
+    ul {
+        list-style-type: none;
+    }
+
+    li {
+        width: 200px;
+    }
+
+    #image {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+    }
+
+    #name {
+        text-align: center;
+        font-family: $secondary-font-type;
+    }
 }
