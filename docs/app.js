@@ -6,6 +6,7 @@ const app = angular.module ('ConsciousPool', [
 const components = [
     require('./components/header.component'),
     require('./components/home.component'),
+    require('./components/artists.component'),
 ];
 
 for (let i = 0; i < components.length; i++) {
@@ -17,15 +18,27 @@ app.config(function ($stateProvider){
         name: 'home',
         url: '/',
     });
+    $stateProvider.state({
+        name: 'artists',
+        url: '/artists',
+        component: 'artists',
+    });
 });
-},{"./components/header.component":2,"./components/home.component":3}],2:[function(require,module,exports){
+},{"./components/artists.component":2,"./components/header.component":3,"./components/home.component":4}],2:[function(require,module,exports){
+module.exports = {
+    name: 'artists',
+    object: {
+        templateUrl: 'templates/artists.html',
+    }
+}
+},{}],3:[function(require,module,exports){
 module.exports = {
     name: 'headerSection',
     object: {
         templateUrl: 'templates/header.html',
     }
 }
-},{}],3:[function(require,module,exports){
+},{}],4:[function(require,module,exports){
 module.exports = {
     name: 'home',
     object: {

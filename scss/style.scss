@@ -14,9 +14,23 @@ body {
         text-decoration: none;
         color: black;
     }
+
+    a:hover {
+        color: lightgrey;
+    }
+
+    h4 {
+        margin: 0px;
+        padding: 3px;
+        font-family: $primary-font-type;
+        color: lightgrey;
+        border-top: 1px solid lightgrey;
+        border-bottom: 1px solid lightgrey;
+    }
 }
 
 // Partials --------------------------------------
 @import 'partials/header';
 @import 'partials/home';
+@import 'partials/artists';
 @import 'partials/footer';

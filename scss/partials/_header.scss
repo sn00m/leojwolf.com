@@ -5,6 +5,7 @@ nav {
         @include grid-column(4);
         font-size: .85em;
         font-family: $primary-font-type;
+        padding-top: 5px;
     }
 
     #nav-links {

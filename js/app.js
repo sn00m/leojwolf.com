@@ -5,6 +5,7 @@ const app = angular.module ('ConsciousPool', [
 const components = [
     require('./components/header.component'),
     require('./components/home.component'),
+    require('./components/artists.component'),
 ];
 
 for (let i = 0; i < components.length; i++) {
@@ -15,5 +16,10 @@ app.config(function ($stateProvider){
     $stateProvider.state({
         name: 'home',
         url: '/',
+    });
+    $stateProvider.state({
+        name: 'artists',
+        url: '/artists',
+        component: 'artists',
     });
 });

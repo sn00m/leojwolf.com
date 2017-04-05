@@ -1263,6 +1263,15 @@ body {
   body a {
     text-decoration: none;
     color: black; }
+  body a:hover {
+    color: lightgrey; }
+  body h4 {
+    margin: 0px;
+    padding: 3px;
+    font-family: "Josefin Sans", sans-serif;
+    color: lightgrey;
+    border-top: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey; }
 
 nav {
   max-width: 75rem;
@@ -1279,7 +1288,8 @@ nav {
     padding-right: 0.625rem;
     padding-left: 0.625rem;
     font-size: .85em;
-    font-family: "Josefin Sans", sans-serif; }
+    font-family: "Josefin Sans", sans-serif;
+    padding-top: 5px; }
     @media print, screen and (min-width: 40em) {
       nav #logo {
         padding-right: 0.9375rem;
@@ -1328,6 +1338,10 @@ nav {
 .hero {
   height: 570px;
   background-image: url("rain-water.jpg"); }
+
+.artists-page {
+  width: 90%;
+  margin: 0 auto; }
 
 footer {
   text-align: center;
