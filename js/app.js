@@ -12,6 +12,14 @@ for (let i = 0; i < components.length; i++) {
     app.component(components[i].name, components[i].object);
 };
 
+const controllers = [
+    require('./controllers/artists.controller'),
+];
+
+for (let i = 0; i < controllers.length; i++) {
+    app.controller(controllers[i].name, controllers[i].func);
+};
+
 app.config(function ($stateProvider){
     $stateProvider.state({
         name: 'home',

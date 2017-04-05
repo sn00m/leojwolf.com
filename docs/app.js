@@ -13,6 +13,14 @@ for (let i = 0; i < components.length; i++) {
     app.component(components[i].name, components[i].object);
 };
 
+const controllers = [
+    require('./controllers/artists.controller'),
+];
+
+for (let i = 0; i < controllers.length; i++) {
+    app.controller(controllers[i].name, controllers[i].func);
+};
+
 app.config(function ($stateProvider){
     $stateProvider.state({
         name: 'home',
@@ -24,10 +32,11 @@ app.config(function ($stateProvider){
         component: 'artists',
     });
 });
-},{"./components/artists.component":2,"./components/header.component":3,"./components/home.component":4}],2:[function(require,module,exports){
+},{"./components/artists.component":2,"./components/header.component":3,"./components/home.component":4,"./controllers/artists.controller":5}],2:[function(require,module,exports){
 module.exports = {
     name: 'artists',
     object: {
+        controller: 'ArtistsController',
         templateUrl: 'templates/artists.html',
     }
 }
@@ -43,6 +52,34 @@ module.exports = {
     name: 'home',
     object: {
         templateUrl: 'templates/home.html',
+    }
+}
+},{}],5:[function(require,module,exports){
+module.exports = {
+    name: 'ArtistsController',
+    func: function ($scope) {
+        $scope.load = () => {
+            // console.log('load');
+            const artists = [
+                {
+                    name: 'snoom',
+                    image: 'guangzhou set.jpg',
+                },
+            ];
+
+            const parent = document.querySelector('#artists-list');
+                for (let i = 0; i < artists.length; i++) {
+                    let artist = document.createElement('li');
+                    artist.innerHTML = Mustache.render (
+                        document.querySelector('#artist-template').innerHTML,
+                        {
+                            artistName: artists[i].name,
+                            artistImage: artists[i].image,
+                        }
+                    );
+                    parent.appendChild(artist);
+                }
+        };
     }
 }
 },{}]},{},[1]);
