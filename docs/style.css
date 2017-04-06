@@ -1337,8 +1337,13 @@ nav {
       margin-left: 50px; }
 
 .hero {
-  height: 570px;
+  height: 600px;
   background-image: url("rain-water.jpg"); }
+  .hero img {
+    display: block;
+    margin: 0 auto;
+    padding-top: 75px;
+    width: 35%; }
 
 .artists-page {
   width: 90%;
@@ -1356,10 +1361,6 @@ nav {
     font-family: "Lato", sans-serif; }
 
 .footer {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  right: 0;
   width: 100%;
   height: 30px;
   background-color: white; }
