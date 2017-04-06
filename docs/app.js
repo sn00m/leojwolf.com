@@ -7,6 +7,9 @@ const components = [
     require('./components/header.component'),
     require('./components/home.component'),
     require('./components/artists.component'),
+    require('./components/media.component'),
+    require('./components/about.component'),
+    require('./components/contact.component'),
 ];
 
 for (let i = 0; i < components.length; i++) {
@@ -31,8 +34,30 @@ app.config(function ($stateProvider){
         url: '/artists',
         component: 'artists',
     });
+    $stateProvider.state({
+        name: 'media',
+        url: '/media',
+        component: 'media',
+    });
+    $stateProvider.state({
+        name: 'about',
+        url: '/about',
+        component: 'about',
+    });
+    $stateProvider.state({
+        name: 'contact',
+        url: '/contact',
+        component: 'contact',
+    });
 });
-},{"./components/artists.component":2,"./components/header.component":3,"./components/home.component":4,"./controllers/artists.controller":5}],2:[function(require,module,exports){
+},{"./components/about.component":2,"./components/artists.component":3,"./components/contact.component":4,"./components/header.component":5,"./components/home.component":6,"./components/media.component":7,"./controllers/artists.controller":8}],2:[function(require,module,exports){
+module.exports = {
+    name: 'about',
+    object: {
+        templateUrl: 'templates/about.html',
+    }
+}
+},{}],3:[function(require,module,exports){
 module.exports = {
     name: 'artists',
     object: {
@@ -40,21 +65,35 @@ module.exports = {
         templateUrl: 'templates/artists.html',
     }
 }
-},{}],3:[function(require,module,exports){
+},{}],4:[function(require,module,exports){
+module.exports = {
+    name: 'contact',
+    object: {
+        templateUrl: 'templates/contact.html',
+    }
+}
+},{}],5:[function(require,module,exports){
 module.exports = {
     name: 'headerSection',
     object: {
         templateUrl: 'templates/header.html',
     }
 }
-},{}],4:[function(require,module,exports){
+},{}],6:[function(require,module,exports){
 module.exports = {
     name: 'home',
     object: {
         templateUrl: 'templates/home.html',
     }
 }
-},{}],5:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
+module.exports = {
+    name: 'media',
+    object: {
+        templateUrl: 'templates/media.html',
+    }
+}
+},{}],8:[function(require,module,exports){
 module.exports = {
     name: 'ArtistsController',
     func: function ($scope) {

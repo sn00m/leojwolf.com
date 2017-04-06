@@ -1266,6 +1266,9 @@ body {
     color: black; }
   body a:hover {
     color: lightgrey; }
+  body .sub {
+    width: 90%;
+    margin: 0 auto; }
   body h4 {
     margin: 0px;
     padding: 3px;
@@ -1345,20 +1348,20 @@ nav {
     padding-top: 75px;
     width: 35%; }
 
-.artists-page {
-  width: 90%;
-  margin: 0 auto; }
-  .artists-page ul {
-    list-style-type: none; }
-  .artists-page li {
-    width: 200px; }
-  .artists-page #image {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%; }
-  .artists-page #name {
-    text-align: center;
-    font-family: "Lato", sans-serif; }
+.artists-page ul {
+  list-style-type: none; }
+
+.artists-page li {
+  width: 200px; }
+
+.artists-page #image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%; }
+
+.artists-page #name {
+  text-align: center;
+  font-family: "Lato", sans-serif; }
 
 .footer {
   width: 100%;

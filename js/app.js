@@ -6,6 +6,9 @@ const components = [
     require('./components/header.component'),
     require('./components/home.component'),
     require('./components/artists.component'),
+    require('./components/media.component'),
+    require('./components/about.component'),
+    require('./components/contact.component'),
 ];
 
 for (let i = 0; i < components.length; i++) {
@@ -29,5 +32,20 @@ app.config(function ($stateProvider){
         name: 'artists',
         url: '/artists',
         component: 'artists',
+    });
+    $stateProvider.state({
+        name: 'media',
+        url: '/media',
+        component: 'media',
+    });
+    $stateProvider.state({
+        name: 'about',
+        url: '/about',
+        component: 'about',
+    });
+    $stateProvider.state({
+        name: 'contact',
+        url: '/contact',
+        component: 'contact',
     });
 });
