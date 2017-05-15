@@ -5,7 +5,7 @@ module.exports = {
             const artists = [
                 {
                     name: 'snoom',
-                    image: 'guangzhou set.jpg',
+                    image: 'assets/guangzhou set.jpg',
                 },
             ];
 

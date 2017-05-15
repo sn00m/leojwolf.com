@@ -6,7 +6,7 @@ gulp.task('html', () => {
     gulp.src('templates/*.html')
         .pipe(gulp.dest('docs/templates'));
     gulp.src('assets/*')
-        .pipe(gulp.dest('docs/'));
+        .pipe(gulp.dest('docs/assets'));
     return gulp.src('*.html')
         .pipe(gulp.dest('docs/'));
 });
