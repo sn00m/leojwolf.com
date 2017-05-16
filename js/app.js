@@ -4,6 +4,7 @@ const app = angular.module ('ConsciousPool', [
 
 const components = [
     require('./components/header.component'),
+    require('./components/footer.component'),
     require('./components/home.component'),
     require('./components/artists.component'),
     require('./components/media.component'),

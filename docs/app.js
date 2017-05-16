@@ -5,6 +5,7 @@ const app = angular.module ('ConsciousPool', [
 
 const components = [
     require('./components/header.component'),
+    require('./components/footer.component'),
     require('./components/home.component'),
     require('./components/artists.component'),
     require('./components/media.component'),
@@ -50,7 +51,7 @@ app.config(function ($stateProvider){
         component: 'contact',
     });
 });
-},{"./components/about.component":2,"./components/artists.component":3,"./components/contact.component":4,"./components/header.component":5,"./components/home.component":6,"./components/media.component":7,"./controllers/artists.controller":8}],2:[function(require,module,exports){
+},{"./components/about.component":2,"./components/artists.component":3,"./components/contact.component":4,"./components/footer.component":5,"./components/header.component":6,"./components/home.component":7,"./components/media.component":8,"./controllers/artists.controller":9}],2:[function(require,module,exports){
 module.exports = {
     name: 'about',
     object: {
@@ -74,26 +75,33 @@ module.exports = {
 }
 },{}],5:[function(require,module,exports){
 module.exports = {
+    name: 'footerSection',
+    object: {
+        templateUrl: 'templates/footer.html',
+    }
+}
+},{}],6:[function(require,module,exports){
+module.exports = {
     name: 'headerSection',
     object: {
         templateUrl: 'templates/header.html',
     }
 }
-},{}],6:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
 module.exports = {
     name: 'home',
     object: {
         templateUrl: 'templates/home.html',
     }
 }
-},{}],7:[function(require,module,exports){
+},{}],8:[function(require,module,exports){
 module.exports = {
     name: 'media',
     object: {
         templateUrl: 'templates/media.html',
     }
 }
-},{}],8:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
 module.exports = {
     name: 'ArtistsController',
     func: function ($scope) {

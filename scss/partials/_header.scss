@@ -25,18 +25,4 @@ nav {
             }
         }
     }
-
-    #social-media {
-        @include grid-column(2);
-        margin-top: 25px;
-
-       #sm-link {
-           width: 25px;
-           margin-right: 10px;
-       }
-
-       #fb {
-           margin-left: 50px;
-       }
-    }
 }
