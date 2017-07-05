@@ -2,14 +2,31 @@ nav {
     @include grid-row();
 
     #logo {
-        @include grid-column(4);
-        font-size: .85em;
+        @include grid-column(12);
+        margin-top: 3em;
+
+        img {
+            display: block;
+            margin: 0 auto;
+            width: 40%;
+        }
+    }
+
+    #title-container {
+        @include grid-column(12);
+        font-size: 2em;
         font-family: $primary-font-type;
         padding-top: 5px;
+        text-align: center;
+
+        #title-link {
+            color: lightgrey;
+        }
     }
 
     #nav-links {
-        @include grid-column(6);
+        @include grid-column(12);
+        font-size: 3em;
         font-family: $secondary-font-type;
         
         ul {
@@ -19,9 +36,10 @@ nav {
 
             li {
                 list-style-type: none;
-                display: inline;
+                display: block;
                 margin: 0 auto;
                 margin-right: 20px;
+                margin-bottom: .5em;
             }
         }
     }

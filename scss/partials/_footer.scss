@@ -1,26 +1,39 @@
 footer {
     @include grid-row();
+    display: block;
+    background-color: black;
+    height: 190px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
 
     #footer {
         @include grid-column(12);
+        @include grid-row();
+        color: lightgrey;
 
-        #copyright {
+        #cr-container {
+            @include grid-column(12);
             text-align: left;
-            font-size: .7em;
+            font-size: 2em;
             font-family: $secondary-font-type;
-            padding: 20px;
+            padding: 5px 20px;
         }
 
         #social-media {
-            margin-top: 25px;
+            @include grid-column(12);
+            font-size: 1.5em;
 
-            #sm-link {
-                width: 25px;
+            .fa {
+                font-size: 2em;
+                width: 1em;
                 margin-right: 10px;
+                color: white;
             }
 
             #fb {
-                margin-left: 50px;
+                margin-left: .5em;
             }
         }
     }
