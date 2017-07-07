@@ -1,8 +1,12 @@
 footer {
     @include grid-row();
     display: block;
+    max-width: 100%;
     background-color: black;
     height: 190px;
+    @include breakpoint($medium) {
+        height: 120px;
+    }
     position: absolute;
     bottom: 0;
     left: 0;
@@ -17,6 +21,9 @@ footer {
             @include grid-column(12);
             text-align: left;
             font-size: 2em;
+            @include breakpoint($medium) {
+                font-size: 1em;
+            }
             font-family: $secondary-font-type;
             padding: 5px 20px;
         }
@@ -24,6 +31,9 @@ footer {
         #social-media {
             @include grid-column(12);
             font-size: 1.5em;
+            @include breakpoint($medium) {
+                font-size: .75em;
+            }
 
             .fa {
                 font-size: 2em;
