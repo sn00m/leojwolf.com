@@ -24,6 +24,7 @@ gulp.task('watch', ['default'], () => {
     gulp.watch('js/*.js', ['js']);
     gulp.watch('js/*/*.js', ['js']);
     gulp.watch('scss/*.scss', ['css']);
+    gulp.watch('scss/partials/*.scss', ['css']);
     gulp.watch('*.html', ['html']);
     gulp.watch('templates/*.html', ['html']);
     gulp.watch('assets/*', ['html']);

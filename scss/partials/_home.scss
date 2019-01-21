@@ -1,12 +1,10 @@
-.hero {
+.video-container {
     height: 100%;
-    // background-image: url("assets/rain-water.jpg");
+    margin-top: 50px;
+    margin-bottom: 100px;
 
-    img {
+    iframe {
         display: block;
         margin: 0 auto;
-        padding-top: 75px;
-        padding-bottom: 75px;
-        width: 35%;
     }
 }

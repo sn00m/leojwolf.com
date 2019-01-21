@@ -1,4 +1,4 @@
-(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+(function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 const app = angular.module ('ConsciousPool', [
     'ui.router',
 ]);
@@ -10,7 +10,6 @@ const components = [
     require('./components/artists.component'),
     require('./components/media.component'),
     require('./components/about.component'),
-    require('./components/contact.component'),
 ];
 
 for (let i = 0; i < components.length; i++) {
@@ -51,7 +50,7 @@ app.config(function ($stateProvider){
         component: 'contact',
     });
 });
-},{"./components/about.component":2,"./components/artists.component":3,"./components/contact.component":4,"./components/footer.component":5,"./components/header.component":6,"./components/home.component":7,"./components/media.component":8,"./controllers/artists.controller":9}],2:[function(require,module,exports){
+},{"./components/about.component":2,"./components/artists.component":3,"./components/footer.component":4,"./components/header.component":5,"./components/home.component":6,"./components/media.component":7,"./controllers/artists.controller":8}],2:[function(require,module,exports){
 module.exports = {
     name: 'about',
     object: {
@@ -68,40 +67,33 @@ module.exports = {
 }
 },{}],4:[function(require,module,exports){
 module.exports = {
-    name: 'contact',
-    object: {
-        templateUrl: 'templates/contact.html',
-    }
-}
-},{}],5:[function(require,module,exports){
-module.exports = {
     name: 'footerSection',
     object: {
         templateUrl: 'templates/footer.html',
     }
 }
-},{}],6:[function(require,module,exports){
+},{}],5:[function(require,module,exports){
 module.exports = {
     name: 'headerSection',
     object: {
         templateUrl: 'templates/header.html',
     }
 }
-},{}],7:[function(require,module,exports){
+},{}],6:[function(require,module,exports){
 module.exports = {
     name: 'home',
     object: {
         templateUrl: 'templates/home.html',
     }
 }
-},{}],8:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
 module.exports = {
     name: 'media',
     object: {
         templateUrl: 'templates/media.html',
     }
 }
-},{}],9:[function(require,module,exports){
+},{}],8:[function(require,module,exports){
 module.exports = {
     name: 'ArtistsController',
     func: function ($scope) {

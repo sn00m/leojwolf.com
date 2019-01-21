@@ -9,7 +9,6 @@ const components = [
     require('./components/artists.component'),
     require('./components/media.component'),
     require('./components/about.component'),
-    require('./components/contact.component'),
 ];
 
 for (let i = 0; i < components.length; i++) {
