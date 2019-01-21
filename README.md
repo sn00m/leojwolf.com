@@ -1,2 +1,2 @@
-# conscious-pool
-An art collective featuring musicians, artists, visionaries, and creators
+# leojwolf.com
+personal site to host my music and art
