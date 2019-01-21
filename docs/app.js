@@ -1,5 +1,5 @@
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
-const app = angular.module ('ConsciousPool', [
+const app = angular.module ('Portfolio', [
     'ui.router',
 ]);
 
@@ -7,9 +7,9 @@ const components = [
     require('./components/header.component'),
     require('./components/footer.component'),
     require('./components/home.component'),
-    require('./components/artists.component'),
-    require('./components/media.component'),
-    require('./components/about.component'),
+    require('./components/music.component'),
+    require('./components/art.component'),
+    require('./components/cv.component'),
 ];
 
 for (let i = 0; i < components.length; i++) {
@@ -17,7 +17,7 @@ for (let i = 0; i < components.length; i++) {
 };
 
 const controllers = [
-    require('./controllers/artists.controller'),
+    require('./controllers/music.controller'),
 ];
 
 for (let i = 0; i < controllers.length; i++) {
@@ -30,39 +30,33 @@ app.config(function ($stateProvider){
         url: '/',
     });
     $stateProvider.state({
-        name: 'artists',
-        url: '/artists',
-        component: 'artists',
+        name: 'music',
+        url: '/music',
+        component: 'music',
     });
     $stateProvider.state({
-        name: 'media',
-        url: '/media',
-        component: 'media',
+        name: 'art',
+        url: '/art',
+        component: 'art',
     });
     $stateProvider.state({
-        name: 'about',
-        url: '/about',
-        component: 'about',
-    });
-    $stateProvider.state({
-        name: 'contact',
-        url: '/contact',
-        component: 'contact',
+        name: 'cv',
+        url: '/cv',
+        component: 'cv',
     });
 });
-},{"./components/about.component":2,"./components/artists.component":3,"./components/footer.component":4,"./components/header.component":5,"./components/home.component":6,"./components/media.component":7,"./controllers/artists.controller":8}],2:[function(require,module,exports){
+},{"./components/art.component":2,"./components/cv.component":3,"./components/footer.component":4,"./components/header.component":5,"./components/home.component":6,"./components/music.component":7,"./controllers/music.controller":8}],2:[function(require,module,exports){
 module.exports = {
-    name: 'about',
+    name: 'art',
     object: {
-        templateUrl: 'templates/about.html',
+        templateUrl: 'templates/art.html',
     }
 }
 },{}],3:[function(require,module,exports){
 module.exports = {
-    name: 'artists',
+    name: 'cv',
     object: {
-        controller: 'ArtistsController',
-        templateUrl: 'templates/artists.html',
+        templateUrl: 'templates/cv.html',
     }
 }
 },{}],4:[function(require,module,exports){
@@ -88,14 +82,15 @@ module.exports = {
 }
 },{}],7:[function(require,module,exports){
 module.exports = {
-    name: 'media',
+    name: 'music',
     object: {
-        templateUrl: 'templates/media.html',
+        controller: 'MusicController',
+        templateUrl: 'templates/music.html',
     }
 }
 },{}],8:[function(require,module,exports){
 module.exports = {
-    name: 'ArtistsController',
+    name: 'MusicController',
     func: function ($scope) {
         $scope.load = () => {
             const artists = [

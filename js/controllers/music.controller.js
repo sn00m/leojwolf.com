@@ -1,5 +1,5 @@
 module.exports = {
-    name: 'ArtistsController',
+    name: 'MusicController',
     func: function ($scope) {
         $scope.load = () => {
             const artists = [

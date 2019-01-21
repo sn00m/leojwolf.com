@@ -1,4 +1,4 @@
-const app = angular.module ('ConsciousPool', [
+const app = angular.module ('Portfolio', [
     'ui.router',
 ]);
 
@@ -6,9 +6,9 @@ const components = [
     require('./components/header.component'),
     require('./components/footer.component'),
     require('./components/home.component'),
-    require('./components/artists.component'),
-    require('./components/media.component'),
-    require('./components/about.component'),
+    require('./components/music.component'),
+    require('./components/art.component'),
+    require('./components/cv.component'),
 ];
 
 for (let i = 0; i < components.length; i++) {
@@ -16,7 +16,7 @@ for (let i = 0; i < components.length; i++) {
 };
 
 const controllers = [
-    require('./controllers/artists.controller'),
+    require('./controllers/music.controller'),
 ];
 
 for (let i = 0; i < controllers.length; i++) {
@@ -29,23 +29,18 @@ app.config(function ($stateProvider){
         url: '/',
     });
     $stateProvider.state({
-        name: 'artists',
-        url: '/artists',
-        component: 'artists',
+        name: 'music',
+        url: '/music',
+        component: 'music',
     });
     $stateProvider.state({
-        name: 'media',
-        url: '/media',
-        component: 'media',
+        name: 'art',
+        url: '/art',
+        component: 'art',
     });
     $stateProvider.state({
-        name: 'about',
-        url: '/about',
-        component: 'about',
-    });
-    $stateProvider.state({
-        name: 'contact',
-        url: '/contact',
-        component: 'contact',
+        name: 'cv',
+        url: '/cv',
+        component: 'cv',
     });
 });

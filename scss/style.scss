@@ -17,6 +17,7 @@ body {
     height: 100%;
     max-width: 100%;
     padding-bottom: 30px;
+    background-color: floralwhite;
 
     a {
         text-decoration: none;
@@ -46,5 +47,5 @@ body {
 // Partials --------------------------------------
 @import 'partials/header';
 @import 'partials/home';
-@import 'partials/artists';
+@import 'partials/music';
 @import 'partials/footer';
