@@ -10,12 +10,12 @@ nav {
         }
 
         div {
-            width: 10%;
+            width: 15%;
             margin: 0 auto;
             @include breakpoint($medium) {
                 margin-top: 1em;
                 margin: 0 auto;
-                width: 20%;
+                width: 25%;
             }
 
             img {
@@ -37,7 +37,7 @@ nav {
         font-family: $secondary-font-type;
         
         ul {
-            width: 24%;
+            width: 30%;
             margin: 0 auto;
             padding: 0px;
             text-align: center;

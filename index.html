@@ -23,11 +23,17 @@
     <script src="https://npmcdn.com/angular-ui-router@1.0.0-beta.3/release/angular-ui-router.min.js"></script>
     <script src="https://use.fontawesome.com/87edec6078.js"></script>
     <script id="artist-template" type="x-mustache-template">
-        <a href=" {{ artistLink }} ">
-            <img id="image" src=" {{ artistImage }} "/>
+        <a href=" #!/{{ artistLink }} ">
             <p id="name">{{ artistName }}</p>
+            <img id="image" src=" {{ artistImage }} "/>
         </a>
     </script>
+    <script id="project-template" type="x-mustache-template">
+        <a href=" #!/{{ projectLink }} ">
+            <p id="name">{{ projectName }}</p>
+            <img id="image" src=" {{ projectImage }} "/>
+        </a>
+        </script>
     <script src="app.js"></script>
 </body>
 

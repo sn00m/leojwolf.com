@@ -2,24 +2,31 @@ module.exports = {
     name: 'MusicController',
     func: function ($scope) {
         $scope.load = () => {
-            const artists = [
+            const musicProjects = [
                 {
-                    name: 'snoom',
-                    image: 'assets/guangzhou set.jpg',
+                    link: 'leo-wolf',
+                    name: 'leo wolf',
+                    image: 'assets/guangzhou-set.jpg',
+                },
+                {
+                    link: 'snoom',
+                    name: 'SNOOM',
+                    image: 'assets/guangzhou-set.jpg',
                 },
             ];
 
-            const parent = document.querySelector('#artists-list');
-                for (let i = 0; i < artists.length; i++) {
-                    let artist = document.createElement('li');
-                    artist.innerHTML = Mustache.render (
-                        document.querySelector('#artist-template').innerHTML,
+            const parent = document.querySelector('#music-projects-list');
+                for (let i = 0; i < musicProjects.length; i++) {
+                    const musicProject = document.createElement('li');
+                    musicProject.innerHTML = Mustache.render (
+                        document.querySelector('#project-template').innerHTML,
                         {
-                            artistName: artists[i].name,
-                            artistImage: artists[i].image,
+                            projectLink: musicProjects[i].link,
+                            projectName: musicProjects[i].name,
+                            projectImage: musicProjects[i].image,
                         }
                     );
-                    parent.appendChild(artist);
+                    parent.appendChild(musicProject);
                 }
         };
     }

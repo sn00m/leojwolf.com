@@ -9,6 +9,8 @@ const components = [
     require('./components/music.component'),
     require('./components/art.component'),
     require('./components/cv.component'),
+    require('./components/leo.component'),
+    require('./components/snoom.component'),
 ];
 
 for (let i = 0; i < components.length; i++) {
@@ -43,4 +45,14 @@ app.config(function ($stateProvider){
         url: '/cv',
         component: 'cv',
     });
+    $stateProvider.state({
+        name: 'leo',
+        url: '/leo-wolf',
+        component: 'leo',
+    })
+    $stateProvider.state({
+        name: 'snoom',
+        url: '/snoom',
+        component: 'snoom',
+    })
 });

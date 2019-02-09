@@ -10,6 +10,8 @@ const components = [
     require('./components/music.component'),
     require('./components/art.component'),
     require('./components/cv.component'),
+    require('./components/leo.component'),
+    require('./components/snoom.component'),
 ];
 
 for (let i = 0; i < components.length; i++) {
@@ -44,8 +46,18 @@ app.config(function ($stateProvider){
         url: '/cv',
         component: 'cv',
     });
+    $stateProvider.state({
+        name: 'leo',
+        url: '/leo-wolf',
+        component: 'leo',
+    })
+    $stateProvider.state({
+        name: 'snoom',
+        url: '/snoom',
+        component: 'snoom',
+    })
 });
-},{"./components/art.component":2,"./components/cv.component":3,"./components/footer.component":4,"./components/header.component":5,"./components/home.component":6,"./components/music.component":7,"./controllers/music.controller":8}],2:[function(require,module,exports){
+},{"./components/art.component":2,"./components/cv.component":3,"./components/footer.component":4,"./components/header.component":5,"./components/home.component":6,"./components/leo.component":7,"./components/music.component":8,"./components/snoom.component":9,"./controllers/music.controller":10}],2:[function(require,module,exports){
 module.exports = {
     name: 'art',
     object: {
@@ -82,35 +94,56 @@ module.exports = {
 }
 },{}],7:[function(require,module,exports){
 module.exports = {
+    name: 'leo',
+    object: {
+        templateUrl: 'templates/leo.html',
+    }
+}
+},{}],8:[function(require,module,exports){
+module.exports = {
     name: 'music',
     object: {
         controller: 'MusicController',
         templateUrl: 'templates/music.html',
     }
 }
-},{}],8:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
+module.exports = {
+    name: 'snoom',
+    object: {
+        templateUrl: 'templates/snoom.html',
+    }
+}
+},{}],10:[function(require,module,exports){
 module.exports = {
     name: 'MusicController',
     func: function ($scope) {
         $scope.load = () => {
-            const artists = [
+            const musicProjects = [
                 {
-                    name: 'snoom',
-                    image: 'assets/guangzhou set.jpg',
+                    link: 'leo-wolf',
+                    name: 'leo wolf',
+                    image: 'assets/guangzhou-set.jpg',
+                },
+                {
+                    link: 'snoom',
+                    name: 'SNOOM',
+                    image: 'assets/guangzhou-set.jpg',
                 },
             ];
 
-            const parent = document.querySelector('#artists-list');
-                for (let i = 0; i < artists.length; i++) {
-                    let artist = document.createElement('li');
-                    artist.innerHTML = Mustache.render (
-                        document.querySelector('#artist-template').innerHTML,
+            const parent = document.querySelector('#music-projects-list');
+                for (let i = 0; i < musicProjects.length; i++) {
+                    const musicProject = document.createElement('li');
+                    musicProject.innerHTML = Mustache.render (
+                        document.querySelector('#project-template').innerHTML,
                         {
-                            artistName: artists[i].name,
-                            artistImage: artists[i].image,
+                            projectLink: musicProjects[i].link,
+                            projectName: musicProjects[i].name,
+                            projectImage: musicProjects[i].image,
                         }
                     );
-                    parent.appendChild(artist);
+                    parent.appendChild(musicProject);
                 }
         };
     }
