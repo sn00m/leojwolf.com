@@ -4,14 +4,14 @@ module.exports = {
         $scope.load = () => {
             const musicProjects = [
                 {
-                    link: 'leo-wolf',
+                    link: '/#!/leo-wolf',
                     name: 'leo wolf',
-                    image: 'assets/guangzhou-set.jpg',
+                    image: 'assets/conscious pool shell logo.png',
                 },
                 {
-                    link: 'snoom',
+                    link: '/#!/snoom',
                     name: 'SNOOM',
-                    image: 'assets/guangzhou-set.jpg',
+                    image: 'assets/conscious pool ripple logo.png',
                 },
             ];
 

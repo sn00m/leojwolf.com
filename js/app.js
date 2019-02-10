@@ -19,6 +19,8 @@ for (let i = 0; i < components.length; i++) {
 
 const controllers = [
     require('./controllers/music.controller'),
+    require('./controllers/leo.controller'),
+    require('./controllers/snoom.controller'),
 ];
 
 for (let i = 0; i < controllers.length; i++) {

@@ -20,6 +20,8 @@ for (let i = 0; i < components.length; i++) {
 
 const controllers = [
     require('./controllers/music.controller'),
+    require('./controllers/leo.controller'),
+    require('./controllers/snoom.controller'),
 ];
 
 for (let i = 0; i < controllers.length; i++) {
@@ -57,7 +59,7 @@ app.config(function ($stateProvider){
         component: 'snoom',
     })
 });
-},{"./components/art.component":2,"./components/cv.component":3,"./components/footer.component":4,"./components/header.component":5,"./components/home.component":6,"./components/leo.component":7,"./components/music.component":8,"./components/snoom.component":9,"./controllers/music.controller":10}],2:[function(require,module,exports){
+},{"./components/art.component":2,"./components/cv.component":3,"./components/footer.component":4,"./components/header.component":5,"./components/home.component":6,"./components/leo.component":7,"./components/music.component":8,"./components/snoom.component":9,"./controllers/leo.controller":10,"./controllers/music.controller":11,"./controllers/snoom.controller":12}],2:[function(require,module,exports){
 module.exports = {
     name: 'art',
     object: {
@@ -96,6 +98,7 @@ module.exports = {
 module.exports = {
     name: 'leo',
     object: {
+        controller: 'LeoController',
         templateUrl: 'templates/leo.html',
     }
 }
@@ -111,24 +114,59 @@ module.exports = {
 module.exports = {
     name: 'snoom',
     object: {
+        controller: 'SnoomController',
         templateUrl: 'templates/snoom.html',
     }
 }
 },{}],10:[function(require,module,exports){
+module.exports = {
+    name: 'LeoController',
+    func: function ($scope) {
+        $scope.load = () => {
+            const leoProjects = [
+                {
+                    link: 'https://leowolf.bandcamp.com/album/spirit-language',
+                    name: 'spirit language',
+                    image: 'assets/spirit language album cover.jpg',
+                },
+                {
+                    link: 'https://leowolf.bandcamp.com/album/our-time-as-ghosts',
+                    name: 'our time as ghosts',
+                    image: 'assets/our time as ghosts album cover.jpg',
+                },
+            ];
+
+            const parent = document.querySelector('#leo-projects-list');
+                for (let i = 0; i < leoProjects.length; i++) {
+                    const leoProject = document.createElement('li');
+                    leoProject.innerHTML = Mustache.render (
+                        document.querySelector('#project-template').innerHTML,
+                        {
+                            projectLink: leoProjects[i].link,
+                            projectName: leoProjects[i].name,
+                            projectImage: leoProjects[i].image,
+                        }
+                    );
+                    parent.appendChild(leoProject);
+                }
+        };
+    }
+}
+},{}],11:[function(require,module,exports){
 module.exports = {
     name: 'MusicController',
     func: function ($scope) {
         $scope.load = () => {
             const musicProjects = [
                 {
-                    link: 'leo-wolf',
+                    link: '/#!/leo-wolf',
                     name: 'leo wolf',
-                    image: 'assets/guangzhou-set.jpg',
+                    image: 'assets/conscious pool shell logo.png',
                 },
                 {
-                    link: 'snoom',
+                    link: '/#!/snoom',
                     name: 'SNOOM',
-                    image: 'assets/guangzhou-set.jpg',
+                    image: 'assets/conscious pool ripple logo.png',
                 },
             ];
 
@@ -144,6 +182,45 @@ module.exports = {
                         }
                     );
                     parent.appendChild(musicProject);
+                }
+        };
+    }
+}
+},{}],12:[function(require,module,exports){
+module.exports = {
+    name: 'SnoomController',
+    func: function ($scope) {
+        $scope.load = () => {
+            const snoomProjects = [
+                {
+                    link: 'https://leowolf.bandcamp.com/album/g-a-r-d-e-n-s',
+                    name: 'g a r d e n s',
+                    image: 'assets/gardens album cover.jpg',
+                },
+                {
+                    link: 'https://leowolf.bandcamp.com/album/lost',
+                    name: 'lost',
+                    image: 'assets/lost album cover.jpg',
+                },
+                {
+                    link: 'https://leowolf.bandcamp.com/album/sleepwalkers',
+                    name: 'sleepwalkers',
+                    image: 'assets/sleepwalkers album cover.jpg',
+                },
+            ];
+
+            const parent = document.querySelector('#snoom-projects-list');
+                for (let i = 0; i < snoomProjects.length; i++) {
+                    const snoomProject = document.createElement('li');
+                    snoomProject.innerHTML = Mustache.render (
+                        document.querySelector('#project-template').innerHTML,
+                        {
+                            projectLink: snoomProjects[i].link,
+                            projectName: snoomProjects[i].name,
+                            projectImage: snoomProjects[i].image,
+                        }
+                    );
+                    parent.appendChild(snoomProject);
                 }
         };
     }

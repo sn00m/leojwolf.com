@@ -1048,8 +1048,8 @@ body {
     margin: 0px;
     padding: 3px;
     font-family: "Josefin Sans", sans-serif;
-    color: lightgrey;
-    border-bottom: 1px solid lightgrey; }
+    color: grey;
+    border-bottom: 1px solid grey; }
 
 nav {
   max-width: 75rem;
@@ -1165,19 +1165,113 @@ nav {
       float: right; }
 
 .artists-page #image {
-  width: 400px;
-  height: 400px;
+  width: 500px;
+  height: 500px;
   border-radius: 50%;
   display: block;
   margin: 0 auto;
-  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");
-  -webkit-filter: grayscale(100%); }
-
-.artists-page #image:hover {
   filter: none;
   -webkit-filter: grayscale(0%); }
 
+.artists-page #image:hover {
+  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");
+  -webkit-filter: grayscale(100%); }
+
 .artists-page #name {
+  text-align: center;
+  font-family: "Lato", sans-serif; }
+
+.leo-page ul {
+  max-width: 75rem;
+  margin-right: auto;
+  margin-left: auto;
+  list-style-type: none;
+  margin-bottom: 100px;
+  padding-left: 0px;
+  padding-top: 50px; }
+  .leo-page ul::before, .leo-page ul::after {
+    display: table;
+    content: ' ';
+    flex-basis: 0;
+    order: 1; }
+  .leo-page ul::after {
+    clear: both; }
+  .leo-page ul li {
+    width: 50%;
+    float: left;
+    padding-right: 0.625rem;
+    padding-left: 0.625rem; }
+    @media print, screen and (min-width: 40em) {
+      .leo-page ul li {
+        padding-right: 0.9375rem;
+        padding-left: 0.9375rem; } }
+    .leo-page ul li, .leo-page ul li:last-child:not(:first-child) {
+      float: left;
+      clear: none; }
+    .leo-page ul li:last-child:not(:first-child) {
+      float: right; }
+
+.leo-page #image {
+  width: 400px;
+  height: 400px;
+  display: block;
+  margin: 0 auto;
+  filter: none;
+  -webkit-filter: grayscale(0%);
+  border: 1px solid black; }
+
+.leo-page #image:hover {
+  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");
+  -webkit-filter: grayscale(100%); }
+
+.leo-page #name {
+  text-align: center;
+  font-family: "Lato", sans-serif; }
+
+.snoom-page ul {
+  max-width: 75rem;
+  margin-right: auto;
+  margin-left: auto;
+  list-style-type: none;
+  margin-bottom: 100px;
+  padding-left: 0px;
+  padding-top: 50px; }
+  .snoom-page ul::before, .snoom-page ul::after {
+    display: table;
+    content: ' ';
+    flex-basis: 0;
+    order: 1; }
+  .snoom-page ul::after {
+    clear: both; }
+  .snoom-page ul li {
+    width: 33.33333%;
+    float: left;
+    padding-right: 0.625rem;
+    padding-left: 0.625rem; }
+    @media print, screen and (min-width: 40em) {
+      .snoom-page ul li {
+        padding-right: 0.9375rem;
+        padding-left: 0.9375rem; } }
+    .snoom-page ul li, .snoom-page ul li:last-child:not(:first-child) {
+      float: left;
+      clear: none; }
+    .snoom-page ul li:last-child:not(:first-child) {
+      float: right; }
+
+.snoom-page #image {
+  width: 300px;
+  height: 300px;
+  display: block;
+  margin: 0 auto;
+  filter: none;
+  -webkit-filter: grayscale(0%);
+  border: 1px solid black; }
+
+.snoom-page #image:hover {
+  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");
+  -webkit-filter: grayscale(100%); }
+
+.snoom-page #name {
   text-align: center;
   font-family: "Lato", sans-serif; }
 

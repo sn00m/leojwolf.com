@@ -1,8 +1,10 @@
-.artists-page {
+.leo-page {
     ul {
         @include grid-row();
         list-style-type: none;
         margin-bottom: 100px;
+        padding-left: 0px;
+        padding-top: 50px;
 
         li {
             @include grid-column(6);
@@ -10,13 +12,13 @@
     }
 
     #image {
-        width: 500px;
-        height: 500px;
-        border-radius: 50%;
+        width: 400px;
+        height: 400px;
         display: block;
         margin: 0 auto;
         filter: none;
         -webkit-filter: grayscale(0%);
+        border: 1px solid black;
     }
 
     #image:hover {

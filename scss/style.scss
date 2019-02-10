@@ -37,8 +37,8 @@ body {
         margin: 0px;
         padding: 3px;
         font-family: $primary-font-type;
-        color: lightgrey;
-        border-bottom: 1px solid lightgrey;
+        color: grey;
+        border-bottom: 1px solid grey;
     }
 
 }
@@ -47,4 +47,6 @@ body {
 @import 'partials/header';
 @import 'partials/home';
 @import 'partials/music';
+@import 'partials/leo';
+@import 'partials/snoom';
 @import 'partials/footer';
