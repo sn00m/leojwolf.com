@@ -20,6 +20,8 @@ body {
     background-size: cover;
 
     button {
+        text-decoration: none;
+        color: floralwhite;
         background-color: black;
         height: 3em;
         width: 80%;
@@ -33,11 +35,6 @@ body {
     button:hover {
         color: black;
         background-color: lightgrey;
-    }
-
-    a {
-        text-decoration: none;
-        color: floralwhite;
     }
 }
 

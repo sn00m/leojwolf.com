@@ -1037,6 +1037,8 @@ body {
   background: url("../assets/lost album cover.jpg") center;
   background-size: cover; }
   body button {
+    text-decoration: none;
+    color: floralwhite;
     background-color: black;
     height: 3em;
     width: 80%;
@@ -1048,9 +1050,6 @@ body {
   body button:hover {
     color: black;
     background-color: lightgrey; }
-  body a {
-    text-decoration: none;
-    color: floralwhite; }
 
 nav {
   max-width: 75rem;
