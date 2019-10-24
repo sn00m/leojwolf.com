@@ -1,5 +1,6 @@
 nav {
     @include grid-row();
+    margin-top: 2.5em;
     margin-bottom: 50px;
 
     #logo {
@@ -10,18 +11,20 @@ nav {
         }
 
         div {
-            width: 15%;
+            width: 25%;
             margin: 0 auto;
             @include breakpoint($medium) {
-                margin-top: 1em;
                 margin: 0 auto;
-                width: 25%;
+                margin-top: 1em;
+                margin-bottom: 2em;
+                width: 55%;
+                background-color: white;
+                border-radius: 100%;
             }
 
             img {
                 display: block;
             }
-        
         }
     }
 
@@ -31,29 +34,25 @@ nav {
         font-size: 3em;
         @include breakpoint($medium) {
             margin-top: 30px;
-            font-size: 1em;
+            font-size: 70px;
             height: 2em;
         }
         font-family: $secondary-font-type;
         
         ul {
-            width: 30%;
+            width: 100%;
             margin: 0 auto;
             padding: 0px;
             text-align: center;
 
             li {
-                width: 20%;
+                width: 100%;
                 list-style-type: none;
                 display: block;
                 @include breakpoint($medium) {
                     display: inline-block;
                 }
                 margin: 0 auto;
-            }
-
-            .nav-slash {
-                width: 5%;
             }
         }
     }

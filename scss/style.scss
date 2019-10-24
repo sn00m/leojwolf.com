@@ -16,37 +16,31 @@ html {
 body {
     height: 100%;
     max-width: 100%;
-    padding-bottom: 30px;
-    background-color: floralwhite;
+    background: url('../assets/lost album cover.jpg') center;
+    background-size: cover;
+
+    button {
+        background-color: black;
+        height: 3em;
+        width: 80%;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        border-radius: 150px;
+        padding-bottom: 10px;
+        opacity: .85;
+    }
+
+    button:hover {
+        color: black;
+        background-color: lightgrey;
+    }
 
     a {
         text-decoration: none;
-        color: black;
+        color: floralwhite;
     }
-
-    a:hover {
-        color: lightgrey;
-    }
-
-    .sub {
-        width: 90%;
-        margin: 0 auto;
-    }
-
-    h4 {
-        margin: 0px;
-        padding: 3px;
-        font-family: $primary-font-type;
-        color: grey;
-        border-bottom: 1px solid grey;
-    }
-
 }
 
 // Partials --------------------------------------
 @import 'partials/header';
 @import 'partials/home';
-@import 'partials/music';
-@import 'partials/leo';
-@import 'partials/snoom';
-@import 'partials/footer';
