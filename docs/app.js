@@ -5,8 +5,10 @@ const app = angular.module ('Portfolio', [
 
 const components = [
     require('./components/header.component'),
+    require('./components/nav.component'),
     require('./components/footer.component'),
     require('./components/home.component'),
+    require('./components/bio.component'),
 ];
 
 for (let i = 0; i < components.length; i++) {
@@ -29,43 +31,62 @@ app.config(function ($stateProvider){
     $stateProvider.state({
         name: 'bio',
         url: '/bio',
+        component: 'bio',
     });
     $stateProvider.state({
         name: 'discography',
         url: '/discography',
+        // component: 'discography',
     });
     $stateProvider.state({
         name: 'gallery',
         url: '/gallery',
+        // component: 'gallery',
     });
     $stateProvider.state({
         name: 'shop',
         url: '/shop',
+        // component: 'shop',
     });
     $stateProvider.state({
         name: 'faq',
         url: '/faq',
+        // component: 'faq',
     });
 });
-},{"./components/footer.component":2,"./components/header.component":3,"./components/home.component":4}],2:[function(require,module,exports){
+},{"./components/bio.component":2,"./components/footer.component":3,"./components/header.component":4,"./components/home.component":5,"./components/nav.component":6}],2:[function(require,module,exports){
+module.exports = {
+    name: 'bio',
+    object: {
+        templateUrl: 'templates/bio.html',
+    }
+}
+},{}],3:[function(require,module,exports){
 module.exports = {
     name: 'footerSection',
     object: {
         templateUrl: 'templates/footer.html',
     }
 }
-},{}],3:[function(require,module,exports){
+},{}],4:[function(require,module,exports){
 module.exports = {
     name: 'headerSection',
     object: {
         templateUrl: 'templates/header.html',
     }
 }
-},{}],4:[function(require,module,exports){
+},{}],5:[function(require,module,exports){
 module.exports = {
     name: 'home',
     object: {
         templateUrl: 'templates/home.html',
+    }
+}
+},{}],6:[function(require,module,exports){
+module.exports = {
+    name: 'navSection',
+    object: {
+        templateUrl: 'templates/nav.html',
     }
 }
 },{}]},{},[1]);

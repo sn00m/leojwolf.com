@@ -11,58 +11,9 @@ h1 {
   }
   margin: 70px 40px 30px 40px;
   @include lg {
-    margin: 70px 40px 0px 40px;
+    margin: 70px 40px 20px 40px;
   }
   a {
     color: whitesmoke;
-  }
-}
-
-.nav-container {
-  @include lg {
-    display: inline-block;
-  }
-
-  nav {
-    @include lg {
-      width: 150px;
-      display: inline-block;
-    }
-    ul {
-      margin-left: 40px;
-      padding: 0;
-      @include lg {
-        margin-top: 0;
-      }
-    }
-    li {
-      color: rgb(255, 255, 255);
-      list-style-type: none;
-      display: inline-block;
-      font-size: 2em;
-      @include lg {
-        font-size: .8em;
-        display: block;
-        margin-bottom: 10px;
-      }
-      a {
-        color: rgb(255, 255, 255);
-        @include lg {
-          padding-left: 8px;
-        }
-      }
-    }
-    li:after {
-      content: "|";
-      @include lg {
-        content: "";
-      }
-      margin: 0 8px 0 8px;
-      color: rgb(255, 255, 255);
-      font-weight: normal;
-    }
-    li:last-child:after {
-      content: "";
-    }
   }
 }
