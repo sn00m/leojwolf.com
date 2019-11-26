@@ -25,4 +25,24 @@ app.config(function ($stateProvider){
         name: 'home',
         url: '/',
     });
+    $stateProvider.state({
+        name: 'bio',
+        url: '/bio',
+    });
+    $stateProvider.state({
+        name: 'discography',
+        url: '/discography',
+    });
+    $stateProvider.state({
+        name: 'photos',
+        url: '/photos',
+    });
+    $stateProvider.state({
+        name: 'store',
+        url: '/store',
+    });
+    $stateProvider.state({
+        name: 'faq',
+        url: '/faq',
+    });
 });

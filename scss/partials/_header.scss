@@ -1,59 +1,40 @@
-nav {
-    @include grid-row();
-    margin-top: 2.5em;
-    margin-bottom: 50px;
+header {
+  display: block;
 
-    #logo {
-        @include grid-column(12);
-        margin-top: 3em;
-        @include breakpoint($medium) {
-            margin-top: 1em;
-        }
-
-        div {
-            width: 25%;
-            margin: 0 auto;
-            @include breakpoint($medium) {
-                margin: 0 auto;
-                margin-top: 1em;
-                margin-bottom: 2em;
-                width: 55%;
-                background-color: white;
-                border-radius: 100%;
-            }
-
-            img {
-                display: block;
-            }
-        }
+  h1 {
+    font-size: 3em;
+    margin: 70px 40px 30px 40px;
+    a {
+      color: whitesmoke;
     }
+  }
 
-    #nav-links {
-        @include grid-column(12);
-        margin-top: 30px;
-        font-size: 3em;
-        @include breakpoint($medium) {
-            margin-top: 30px;
-            font-size: 70px;
-            height: 2em;
-        }
-        font-family: $secondary-font-type;
-        
-        ul {
-            width: 100%;
-            margin: 0 auto;
-            padding: 0px;
-            text-align: center;
-
-            li {
-                width: 100%;
-                list-style-type: none;
-                display: block;
-                @include breakpoint($medium) {
-                    display: inline-block;
-                }
-                margin: 0 auto;
-            }
-        }
+  nav {
+    ul {
+      margin-left: 40px;
+      padding: 0;
     }
+    li {
+      color: rgb(255, 255, 255);
+      list-style-type: none;
+      display: inline-block;
+      font-size: 2.2em;
+      a {
+        color: rgb(255, 255, 255);
+        margin-right: 8px;
+      }
+      a:last-child {
+        margin-left: 8px;
+      }
+    }
+    li:after {
+      content: "/";
+      margin: 0 4px 0 8px;
+      color: rgb(255, 255, 255);
+      font-weight: normal;
+    }
+    li:last-child:after {
+      content: "";
+    }
+  }
 }

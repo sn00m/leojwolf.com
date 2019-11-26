@@ -1034,106 +1034,37 @@ html {
 body {
   height: 100%;
   max-width: 100%;
-  background: url("../assets/lost album cover.jpg") center;
-  background-size: cover; }
-  body button {
-    text-decoration: none;
-    color: floralwhite;
-    background-color: black;
-    height: 3em;
-    width: 80%;
-    margin-top: 25px;
-    margin-bottom: 25px;
-    border-radius: 150px;
-    padding-bottom: 10px;
-    opacity: .85; }
-  body button:hover {
-    color: black;
-    background-color: lightgrey; }
+  background-size: cover;
+  background-color: #1b1b1b;
+  font-family: "PT Serif", TimesNewRoman, Times, serif; }
 
-nav {
-  max-width: 75rem;
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: 2.5em;
-  margin-bottom: 50px; }
-  nav::before, nav::after {
-    display: table;
-    content: ' ';
-    flex-basis: 0;
-    order: 1; }
-  nav::after {
-    clear: both; }
-  nav #logo {
-    width: 100%;
-    float: left;
-    padding-right: 0.625rem;
-    padding-left: 0.625rem;
-    margin-top: 3em; }
-    @media print, screen and (min-width: 40em) {
-      nav #logo {
-        padding-right: 0.9375rem;
-        padding-left: 0.9375rem; } }
-    nav #logo, nav #logo:last-child:not(:first-child) {
-      float: left;
-      clear: none; }
-    nav #logo:last-child:not(:first-child) {
-      float: right; }
-    @media screen and (min-width: 46.875em) {
-      nav #logo {
-        margin-top: 1em; } }
-    nav #logo div {
-      width: 25%;
-      margin: 0 auto; }
-      @media screen and (min-width: 46.875em) {
-        nav #logo div {
-          margin: 0 auto;
-          margin-top: 1em;
-          margin-bottom: 2em;
-          width: 55%;
-          background-color: white;
-          border-radius: 100%; } }
-      nav #logo div img {
-        display: block; }
-  nav #nav-links {
-    width: 100%;
-    float: left;
-    padding-right: 0.625rem;
-    padding-left: 0.625rem;
-    margin-top: 30px;
+a {
+  text-decoration: none; }
+
+header {
+  display: block; }
+  header h1 {
     font-size: 3em;
-    font-family: "Lato", sans-serif; }
-    @media print, screen and (min-width: 40em) {
-      nav #nav-links {
-        padding-right: 0.9375rem;
-        padding-left: 0.9375rem; } }
-    nav #nav-links, nav #nav-links:last-child:not(:first-child) {
-      float: left;
-      clear: none; }
-    nav #nav-links:last-child:not(:first-child) {
-      float: right; }
-    @media screen and (min-width: 46.875em) {
-      nav #nav-links {
-        margin-top: 30px;
-        font-size: 70px;
-        height: 2em; } }
-    nav #nav-links ul {
-      width: 100%;
-      margin: 0 auto;
-      padding: 0px;
-      text-align: center; }
-      nav #nav-links ul li {
-        width: 100%;
-        list-style-type: none;
-        display: block;
-        margin: 0 auto; }
-        @media screen and (min-width: 46.875em) {
-          nav #nav-links ul li {
-            display: inline-block; } }
-
-.video-container {
-  height: 100%;
-  margin-bottom: 100px; }
-  .video-container iframe {
-    display: block;
-    margin: 0 auto; }
+    margin: 70px 40px 30px 40px; }
+    header h1 a {
+      color: whitesmoke; }
+  header nav ul {
+    margin-left: 40px;
+    padding: 0; }
+  header nav li {
+    color: white;
+    list-style-type: none;
+    display: inline-block;
+    font-size: 2.2em; }
+    header nav li a {
+      color: white;
+      margin-right: 8px; }
+    header nav li a:last-child {
+      margin-left: 8px; }
+  header nav li:after {
+    content: "/";
+    margin: 0 4px 0 8px;
+    color: white;
+    font-weight: normal; }
+  header nav li:last-child:after {
+    content: ""; }

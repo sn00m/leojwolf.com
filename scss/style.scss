@@ -3,10 +3,7 @@
 @include foundation-global-styles;
 @include foundation-grid;
 
-$primary-font-type: 'Josefin Sans', sans-serif;
-$secondary-font-type: 'Lato', sans-serif; 
-$medium: 750px;
-$large: 900px;
+$primary-font-type: 'PT Serif', TimesNewRoman, Times, serif;; 
 
 // Global styles ---------------------------------
 html {
@@ -16,28 +13,18 @@ html {
 body {
     height: 100%;
     max-width: 100%;
-    background: url('../assets/lost album cover.jpg') center fixed;
+    // background: url('../assets/lost album cover.jpg') center fixed;
     background-size: cover;
+    background-color: rgb(27, 27, 27);
+    font-family: $primary-font-type;
+}
 
-    button {
-        text-decoration: none;
-        color: floralwhite;
-        background-color: black;
-        height: 3em;
-        width: 80%;
-        margin-top: 25px;
-        margin-bottom: 25px;
-        border-radius: 150px;
-        padding-bottom: 10px;
-        opacity: .85;
-    }
-
-    button:hover {
-        color: black;
-        background-color: lightgrey;
-    }
+a {
+    text-decoration: none;
 }
 
 // Partials --------------------------------------
+@import './breakpoints';
+@import './mixins';
 @import 'partials/header';
 @import 'partials/home';
