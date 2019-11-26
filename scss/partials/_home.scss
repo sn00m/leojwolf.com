@@ -1,0 +1,16 @@
+.content-container {
+    width: 80%;
+    margin-bottom: 200px;
+    margin: 0 auto;
+    padding-top: 70px;
+    @include lg {
+        display: inline-block;
+        width: 50%;
+        margin-left: 12%;
+        padding-top: 30px;
+    }
+
+    img {
+        border-radius: .5%;
+    }
+}

@@ -34,12 +34,12 @@ app.config(function ($stateProvider){
         url: '/discography',
     });
     $stateProvider.state({
-        name: 'photos',
-        url: '/photos',
+        name: 'gallery',
+        url: '/gallery',
     });
     $stateProvider.state({
-        name: 'store',
-        url: '/store',
+        name: 'shop',
+        url: '/shop',
     });
     $stateProvider.state({
         name: 'faq',

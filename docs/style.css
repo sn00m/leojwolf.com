@@ -1041,30 +1041,76 @@ body {
 a {
   text-decoration: none; }
 
-header {
-  display: block; }
-  header h1 {
-    font-size: 3em;
-    margin: 70px 40px 30px 40px; }
-    header h1 a {
-      color: whitesmoke; }
-  header nav ul {
-    margin-left: 40px;
-    padding: 0; }
-  header nav li {
-    color: white;
-    list-style-type: none;
-    display: inline-block;
-    font-size: 2.2em; }
-    header nav li a {
-      color: white;
-      margin-right: 8px; }
-    header nav li a:last-child {
-      margin-left: 8px; }
-  header nav li:after {
-    content: "/";
-    margin: 0 4px 0 8px;
-    color: white;
-    font-weight: normal; }
-  header nav li:last-child:after {
-    content: ""; }
+@media (min-width: 992px) {
+  #header {
+    width: 200px; } }
+
+h1 {
+  font-size: 3em;
+  margin: 70px 40px 30px 40px; }
+  @media (min-width: 992px) {
+    h1 {
+      font-size: 1em; } }
+  @media (min-width: 992px) {
+    h1 {
+      margin: 70px 40px 0px 40px; } }
+  h1 a {
+    color: whitesmoke; }
+
+@media (min-width: 992px) {
+  .nav-container {
+    display: inline-block; } }
+
+@media (min-width: 992px) {
+  .nav-container nav {
+    width: 150px;
+    display: inline-block; } }
+
+.nav-container nav ul {
+  margin-left: 40px;
+  padding: 0; }
+  @media (min-width: 992px) {
+    .nav-container nav ul {
+      margin-top: 0; } }
+
+.nav-container nav li {
+  color: white;
+  list-style-type: none;
+  display: inline-block;
+  font-size: 2em; }
+  @media (min-width: 992px) {
+    .nav-container nav li {
+      font-size: .8em;
+      display: block;
+      margin-bottom: 10px; } }
+  .nav-container nav li a {
+    color: white; }
+    @media (min-width: 992px) {
+      .nav-container nav li a {
+        padding-left: 8px; } }
+
+.nav-container nav li:after {
+  content: "|";
+  margin: 0 8px 0 8px;
+  color: white;
+  font-weight: normal; }
+  @media (min-width: 992px) {
+    .nav-container nav li:after {
+      content: ""; } }
+
+.nav-container nav li:last-child:after {
+  content: ""; }
+
+.content-container {
+  width: 80%;
+  margin-bottom: 200px;
+  margin: 0 auto;
+  padding-top: 70px; }
+  @media (min-width: 992px) {
+    .content-container {
+      display: inline-block;
+      width: 50%;
+      margin-left: 12%;
+      padding-top: 30px; } }
+  .content-container img {
+    border-radius: .5%; }
