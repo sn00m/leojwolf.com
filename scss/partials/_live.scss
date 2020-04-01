@@ -1,0 +1,47 @@
+#live-vid {
+    iframe {
+        display: block;
+        margin: 0 auto;
+        @include lg {
+            display: inline-block;
+            margin: 0;
+        }
+    }
+
+    .p-container {
+        width: 700px;
+        display: block;
+        margin: 0 auto;
+        @include lg {
+            display: inline-block;
+            margin: 0;
+        }
+    }
+
+    p {
+
+        font-size: 1.5em;
+        @include lg {
+            display: inline-block;
+            margin: 0;
+            font-size: .7em;
+        }
+    }
+}
+
+#events {
+h2 {
+    font-size: 2.5em;
+    @include lg {
+      font-size: .8em;
+    }
+    color: rgb(255, 255, 255);
+}
+
+p {
+    @include lg {
+      font-size: .8em;
+    }
+    font-size: 2em;
+}
+}

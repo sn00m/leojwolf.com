@@ -8,6 +8,8 @@ const components = [
     require('./components/footer.component'),
     require('./components/home.component'),
     require('./components/bio.component'),
+    require('./components/connect.component'),
+    require('./components/live.component'),
 ];
 
 for (let i = 0; i < components.length; i++) {
@@ -33,23 +35,23 @@ app.config(function ($stateProvider){
         component: 'bio',
     });
     $stateProvider.state({
-        name: 'discography',
-        url: '/discography',
-        // component: 'discography',
+        name: 'sound',
+        url: '/sound',
+        // component: 'sound',
     });
     $stateProvider.state({
-        name: 'gallery',
-        url: '/gallery',
-        // component: 'gallery',
+        name: 'sight',
+        url: '/sight',
+        // component: 'sight',
     });
     $stateProvider.state({
-        name: 'shop',
-        url: '/shop',
-        // component: 'shop',
+        name: 'live',
+        url: '/live',
+        component: 'live',
     });
     $stateProvider.state({
-        name: 'faq',
-        url: '/faq',
-        // component: 'faq',
+        name: 'connect',
+        url: '/connect',
+        component: 'connect',
     });
 });

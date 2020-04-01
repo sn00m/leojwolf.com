@@ -9,6 +9,8 @@ const components = [
     require('./components/footer.component'),
     require('./components/home.component'),
     require('./components/bio.component'),
+    require('./components/connect.component'),
+    require('./components/live.component'),
 ];
 
 for (let i = 0; i < components.length; i++) {
@@ -34,27 +36,27 @@ app.config(function ($stateProvider){
         component: 'bio',
     });
     $stateProvider.state({
-        name: 'discography',
-        url: '/discography',
-        // component: 'discography',
+        name: 'sound',
+        url: '/sound',
+        // component: 'sound',
     });
     $stateProvider.state({
-        name: 'gallery',
-        url: '/gallery',
-        // component: 'gallery',
+        name: 'sight',
+        url: '/sight',
+        // component: 'sight',
     });
     $stateProvider.state({
-        name: 'shop',
-        url: '/shop',
-        // component: 'shop',
+        name: 'live',
+        url: '/live',
+        component: 'live',
     });
     $stateProvider.state({
-        name: 'faq',
-        url: '/faq',
-        // component: 'faq',
+        name: 'connect',
+        url: '/connect',
+        component: 'connect',
     });
 });
-},{"./components/bio.component":2,"./components/footer.component":3,"./components/header.component":4,"./components/home.component":5,"./components/nav.component":6}],2:[function(require,module,exports){
+},{"./components/bio.component":2,"./components/connect.component":3,"./components/footer.component":4,"./components/header.component":5,"./components/home.component":6,"./components/live.component":7,"./components/nav.component":8}],2:[function(require,module,exports){
 module.exports = {
     name: 'bio',
     object: {
@@ -63,26 +65,40 @@ module.exports = {
 }
 },{}],3:[function(require,module,exports){
 module.exports = {
+    name: 'connect',
+    object: {
+        templateUrl: 'templates/connect.html',
+    }
+}
+},{}],4:[function(require,module,exports){
+module.exports = {
     name: 'footerSection',
     object: {
         templateUrl: 'templates/footer.html',
     }
 }
-},{}],4:[function(require,module,exports){
+},{}],5:[function(require,module,exports){
 module.exports = {
     name: 'headerSection',
     object: {
         templateUrl: 'templates/header.html',
     }
 }
-},{}],5:[function(require,module,exports){
+},{}],6:[function(require,module,exports){
 module.exports = {
     name: 'home',
     object: {
         templateUrl: 'templates/home.html',
     }
 }
-},{}],6:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
+module.exports = {
+    name: 'live',
+    object: {
+        templateUrl: 'templates/live.html',
+    }
+}
+},{}],8:[function(require,module,exports){
 module.exports = {
     name: 'navSection',
     object: {

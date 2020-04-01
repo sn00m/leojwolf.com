@@ -1,0 +1,19 @@
+#social-links {
+li {
+    color: rgb(255, 255, 255);
+    list-style-type: none;
+    display: inline-block;
+    font-size: 2em;
+    @include lg {
+      font-size: 0.8em;
+      display: block;
+      margin-bottom: 10px;
+    }
+    a {
+      color: rgb(255, 255, 255);
+      @include lg {
+        padding-left: 8px;
+      }
+    }
+  }
+}
