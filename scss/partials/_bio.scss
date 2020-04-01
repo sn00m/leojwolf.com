@@ -7,28 +7,6 @@
       padding-top: 0px;
       padding-left: 40px;
     }
-
-    .p-container {
-        @include lg {
-          width: 583px;
-        }
-        width: 850px;
-        margin-top: 30px;
-
-        p {
-            font-size: .8em;
-        }
-
-        .lab-container {
-
-            img {
-                display: block;
-                width: 70px;
-                margin: 0 auto;
-                margin-top: 30px;
-            }
-        }
-    }
   
     .img-container {
       @include lg {
@@ -42,6 +20,34 @@
             width: 70%;
             margin-top: 0;
           }
+        }
+    }
+
+    .p-container {
+        @include lg {
+          width: 583px;
+        }
+        width: 850px;
+        margin-top: 30px;
+
+        p {
+          @include lg {
+            font-size: .8em;
+          }
+          font-size: 2em;
+        }
+
+        .lab-container {
+
+            img {
+                display: block;
+                width: 100px;
+                @include lg {
+                    width: 70px;
+                }
+                margin: 0 auto;
+                margin-top: 30px;
+            }
         }
     }
   }

@@ -1176,19 +1176,6 @@ h1 {
     .content-container {
       padding-top: 0px;
       padding-left: 40px; } }
-  .content-container .p-container {
-    width: 850px;
-    margin-top: 30px; }
-    @media (min-width: 992px) {
-      .content-container .p-container {
-        width: 583px; } }
-    .content-container .p-container p {
-      font-size: .8em; }
-    .content-container .p-container .lab-container img {
-      display: block;
-      width: 70px;
-      margin: 0 auto;
-      margin-top: 30px; }
   @media (min-width: 992px) {
     .content-container .img-container {
       margin: 0 auto; } }
@@ -1200,3 +1187,22 @@ h1 {
       .content-container .img-container img {
         width: 70%;
         margin-top: 0; } }
+  .content-container .p-container {
+    width: 850px;
+    margin-top: 30px; }
+    @media (min-width: 992px) {
+      .content-container .p-container {
+        width: 583px; } }
+    .content-container .p-container p {
+      font-size: 2em; }
+      @media (min-width: 992px) {
+        .content-container .p-container p {
+          font-size: .8em; } }
+    .content-container .p-container .lab-container img {
+      display: block;
+      width: 100px;
+      margin: 0 auto;
+      margin-top: 30px; }
+      @media (min-width: 992px) {
+        .content-container .p-container .lab-container img {
+          width: 70px; } }
