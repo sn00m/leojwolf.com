@@ -29,7 +29,6 @@
         }
         width: 850px;
         margin-top: 30px;
-        margin-bottom: 30px;
 
         p {
           @include lg {
@@ -48,6 +47,7 @@
                 }
                 margin: 0 auto;
                 margin-top: 30px;
+                margin-bottom: 30px;
             }
         }
     }
