@@ -15,7 +15,7 @@
       img {
           width: 100%;
           border-radius: 0.5%;
-          margin-top: 170px;
+          margin-top: 20px;
           @include lg {
             width: 70%;
             margin-top: 0;
@@ -38,7 +38,8 @@
         }
 
         .lab-container {
-
+            margin-bottom: 30px;
+            
             img {
                 display: block;
                 width: 100px;

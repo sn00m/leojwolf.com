@@ -1161,7 +1161,7 @@ h1 {
   .content-container .img-container img {
     width: 100%;
     border-radius: 0.5%;
-    margin-top: 170px; }
+    margin-top: 20px; }
     @media (min-width: 992px) {
       .content-container .img-container img {
         width: 70%;
@@ -1182,7 +1182,7 @@ h1 {
   .content-container .img-container img {
     width: 100%;
     border-radius: 0.5%;
-    margin-top: 170px; }
+    margin-top: 20px; }
     @media (min-width: 992px) {
       .content-container .img-container img {
         width: 70%;
@@ -1198,15 +1198,17 @@ h1 {
       @media (min-width: 992px) {
         .content-container .p-container p {
           font-size: .8em; } }
-    .content-container .p-container .lab-container img {
-      display: block;
-      width: 100px;
-      margin: 0 auto;
-      margin-top: 30px;
+    .content-container .p-container .lab-container {
       margin-bottom: 30px; }
-      @media (min-width: 992px) {
-        .content-container .p-container .lab-container img {
-          width: 70px; } }
+      .content-container .p-container .lab-container img {
+        display: block;
+        width: 100px;
+        margin: 0 auto;
+        margin-top: 30px;
+        margin-bottom: 30px; }
+        @media (min-width: 992px) {
+          .content-container .p-container .lab-container img {
+            width: 70px; } }
 
 #social-links li {
   color: white;
