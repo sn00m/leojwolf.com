@@ -1,0 +1,46 @@
+#discography-page {
+    h2 {
+        font-size: 2.5em;
+        @include lg {
+          font-size: .8em;
+        }
+        color: rgb(255, 255, 255);
+        margin-bottom: 30px;
+    }
+
+    ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    li {
+        width: 700px;
+        margin: 0 auto;
+        @include lg {
+            width: 300px;
+            display: inline-block;
+            margin-right: 50px;
+        }
+        margin-bottom: 70px;
+    }
+
+    #image {
+        width: 700px;
+        height: 700px;
+        @include lg {
+            width: 300px;
+            height: 300px;
+        }
+    }
+
+    #name {
+        text-align: center;
+    }
+
+    p {
+        @include lg {
+          font-size: .8em;
+        }
+        font-size: 2em;
+    }
+}

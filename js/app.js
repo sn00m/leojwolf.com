@@ -10,6 +10,7 @@ const components = [
     require('./components/bio.component'),
     require('./components/connect.component'),
     require('./components/live.component'),
+    require('./components/sound.component'),
 ];
 
 for (let i = 0; i < components.length; i++) {
@@ -17,7 +18,7 @@ for (let i = 0; i < components.length; i++) {
 };
 
 const controllers = [
-
+    require('./controllers/sound.controller'),
 ];
 
 for (let i = 0; i < controllers.length; i++) {
@@ -37,7 +38,7 @@ app.config(function ($stateProvider){
     $stateProvider.state({
         name: 'sound',
         url: '/sound',
-        // component: 'sound',
+        component: 'sound',
     });
     $stateProvider.state({
         name: 'sight',
