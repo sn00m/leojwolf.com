@@ -1304,6 +1304,9 @@ h1 {
       font-size: .8em; } }
 
 #footer {
-  font-size: .65em;
+  font-size: 1.2em;
   text-align: center;
   margin-bottom: 20px; }
+  @media (min-width: 992px) {
+    #footer {
+      font-size: .65em; } }
