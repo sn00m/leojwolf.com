@@ -6,12 +6,12 @@ module.exports = {
                 {
                     name: 'Magnolia',
                     image: 'assets/Magnolia Album Cover w filter.jpg',
-                    link: 'https://sinetology.bandcamp.com/album/magnolia',
+                    link: 'https://leowolf.bandcamp.com/album/magnolia',
                 },
                 {
                     name: 'Dragon',
                     image: 'assets/Dragon-Album-Art-3750x3750.jpg',
-                    link: 'https://sinetology.bandcamp.com/album/dragon',
+                    link: 'https://leowolf.bandcamp.com/album/dragon',
                 },
                 {
                     name: 'live 2',
