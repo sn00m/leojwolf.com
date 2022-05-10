@@ -6,7 +6,7 @@ module.exports = {
                 {
                     name: 'Recursion',
                     image: 'assets/recursion cover.jpg',
-                    link: 'https://leowolf.bandcamp.com/album/recursion',
+                    link: 'https://leowolf.bandcamp.com/track/recursion',
                 },
                 {
                     name: 'Magnolia',
