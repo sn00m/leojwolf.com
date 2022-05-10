@@ -9,9 +9,8 @@ const components = [
     require('./components/footer.component'),
     require('./components/home.component'),
     require('./components/bio.component'),
-    require('./components/connect.component'),
-    require('./components/live.component'),
-    require('./components/sound.component'),
+    require('./components/links.component'),
+    require('./components/discography.component'),
 ];
 
 for (let i = 0; i < components.length; i++) {
@@ -19,7 +18,7 @@ for (let i = 0; i < components.length; i++) {
 };
 
 const controllers = [
-    require('./controllers/sound.controller'),
+    require('./controllers/discography.controller'),
 ];
 
 for (let i = 0; i < controllers.length; i++) {
@@ -37,27 +36,17 @@ app.config(function ($stateProvider){
         component: 'bio',
     });
     $stateProvider.state({
-        name: 'sound',
-        url: '/sound',
-        component: 'sound',
+        name: 'discography',
+        url: '/discography',
+        component: 'discography',
     });
     $stateProvider.state({
-        name: 'sight',
-        url: '/sight',
-        // component: 'sight',
-    });
-    $stateProvider.state({
-        name: 'live',
-        url: '/live',
-        component: 'live',
-    });
-    $stateProvider.state({
-        name: 'connect',
-        url: '/connect',
-        component: 'connect',
+        name: 'links',
+        url: '/links',
+        component: 'links',
     });
 });
-},{"./components/bio.component":2,"./components/connect.component":3,"./components/footer.component":4,"./components/header.component":5,"./components/home.component":6,"./components/live.component":7,"./components/nav.component":8,"./components/sound.component":9,"./controllers/sound.controller":10}],2:[function(require,module,exports){
+},{"./components/bio.component":2,"./components/discography.component":3,"./components/footer.component":4,"./components/header.component":5,"./components/home.component":6,"./components/links.component":7,"./components/nav.component":8,"./controllers/discography.controller":9}],2:[function(require,module,exports){
 module.exports = {
     name: 'bio',
     object: {
@@ -66,9 +55,10 @@ module.exports = {
 }
 },{}],3:[function(require,module,exports){
 module.exports = {
-    name: 'connect',
+    name: 'discography',
     object: {
-        templateUrl: 'templates/connect.html',
+        controller: 'DiscogController',
+        templateUrl: 'templates/sound.html',
     }
 }
 },{}],4:[function(require,module,exports){
@@ -94,9 +84,9 @@ module.exports = {
 }
 },{}],7:[function(require,module,exports){
 module.exports = {
-    name: 'live',
+    name: 'links',
     object: {
-        templateUrl: 'templates/live.html',
+        templateUrl: 'templates/links.html',
     }
 }
 },{}],8:[function(require,module,exports){
@@ -108,18 +98,15 @@ module.exports = {
 }
 },{}],9:[function(require,module,exports){
 module.exports = {
-    name: 'sound',
-    object: {
-        controller: 'DiscogController',
-        templateUrl: 'templates/sound.html',
-    }
-}
-},{}],10:[function(require,module,exports){
-module.exports = {
     name: 'DiscogController',
     func: function ($scope) {
         $scope.load = () => {
             const albums = [
+                {
+                    name: 'Recursion',
+                    image: 'assets/recursion cover.jpg',
+                    link: 'https://leowolf.bandcamp.com/album/recursion',
+                },
                 {
                     name: 'Magnolia',
                     image: 'assets/Magnolia Album Cover w filter.jpg',
@@ -131,14 +118,19 @@ module.exports = {
                     link: 'https://leowolf.bandcamp.com/album/dragon',
                 },
                 {
-                    name: 'live 2',
-                    image: 'assets/live 2 cover.jpg',
-                    link: 'https://leowolf.bandcamp.com/album/live-2-2',
+                    name: 'III',
+                    image: 'assets/iii cover.jpg',
+                    link: 'https://leowolf.bandcamp.com/album/iii',
                 },
                 {
-                    name: 'live 1',
+                    name: 'II',
+                    image: 'assets/live 2 cover.jpg',
+                    link: 'https://leowolf.bandcamp.com/album/ii',
+                },
+                {
+                    name: 'I',
                     image: 'assets/live 1 cover.jpg',
-                    link: 'https://leowolf.bandcamp.com/album/live-1',
+                    link: 'https://leowolf.bandcamp.com/album/i',
                 },
             ];
 

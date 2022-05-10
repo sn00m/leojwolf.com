@@ -8,9 +8,8 @@ const components = [
     require('./components/footer.component'),
     require('./components/home.component'),
     require('./components/bio.component'),
-    require('./components/connect.component'),
-    require('./components/live.component'),
-    require('./components/sound.component'),
+    require('./components/links.component'),
+    require('./components/discography.component'),
 ];
 
 for (let i = 0; i < components.length; i++) {
@@ -18,7 +17,7 @@ for (let i = 0; i < components.length; i++) {
 };
 
 const controllers = [
-    require('./controllers/sound.controller'),
+    require('./controllers/discography.controller'),
 ];
 
 for (let i = 0; i < controllers.length; i++) {
@@ -36,23 +35,13 @@ app.config(function ($stateProvider){
         component: 'bio',
     });
     $stateProvider.state({
-        name: 'sound',
-        url: '/sound',
-        component: 'sound',
+        name: 'discography',
+        url: '/discography',
+        component: 'discography',
     });
     $stateProvider.state({
-        name: 'sight',
-        url: '/sight',
-        // component: 'sight',
-    });
-    $stateProvider.state({
-        name: 'live',
-        url: '/live',
-        component: 'live',
-    });
-    $stateProvider.state({
-        name: 'connect',
-        url: '/connect',
-        component: 'connect',
+        name: 'links',
+        url: '/links',
+        component: 'links',
     });
 });

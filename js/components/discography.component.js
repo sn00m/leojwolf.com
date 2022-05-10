@@ -1,5 +1,5 @@
 module.exports = {
-    name: 'sound',
+    name: 'discography',
     object: {
         controller: 'DiscogController',
         templateUrl: 'templates/sound.html',

@@ -4,6 +4,11 @@ module.exports = {
         $scope.load = () => {
             const albums = [
                 {
+                    name: 'Recursion',
+                    image: 'assets/recursion cover.jpg',
+                    link: 'https://leowolf.bandcamp.com/album/recursion',
+                },
+                {
                     name: 'Magnolia',
                     image: 'assets/Magnolia Album Cover w filter.jpg',
                     link: 'https://leowolf.bandcamp.com/album/magnolia',
@@ -14,14 +19,19 @@ module.exports = {
                     link: 'https://leowolf.bandcamp.com/album/dragon',
                 },
                 {
-                    name: 'live 2',
-                    image: 'assets/live 2 cover.jpg',
-                    link: 'https://leowolf.bandcamp.com/album/live-2-2',
+                    name: 'III',
+                    image: 'assets/iii cover.jpg',
+                    link: 'https://leowolf.bandcamp.com/album/iii',
                 },
                 {
-                    name: 'live 1',
+                    name: 'II',
+                    image: 'assets/live 2 cover.jpg',
+                    link: 'https://leowolf.bandcamp.com/album/ii',
+                },
+                {
+                    name: 'I',
                     image: 'assets/live 1 cover.jpg',
-                    link: 'https://leowolf.bandcamp.com/album/live-1',
+                    link: 'https://leowolf.bandcamp.com/album/i',
                 },
             ];
 
