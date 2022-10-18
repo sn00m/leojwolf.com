@@ -103,6 +103,11 @@ module.exports = {
         $scope.load = () => {
             const albums = [
                 {
+                    name: 'A Ritual At Dusk; Light Breaks Down',
+                    image: 'assets/a ritual.jpg',
+                    link: 'https://leowolf.bandcamp.com/album/a-ritual-at-dusk-light-breaks-down',
+                },
+                {
                     name: 'Recursion',
                     image: 'assets/recursion cover.jpg',
                     link: 'https://leowolf.bandcamp.com/track/recursion',
