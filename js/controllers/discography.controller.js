@@ -4,6 +4,11 @@ module.exports = {
         $scope.load = () => {
             const albums = [
                 {
+                    name: 'Shapeshifter',
+                    image: 'assets/Shapeshifter Cover.JPG',
+                    link: 'https://leowolf.bandcamp.com/album/shapeshifter',
+                },
+                {
                     name: 'A Ritual At Dusk; Light Breaks Down',
                     image: 'assets/a ritual.jpg',
                     link: 'https://leowolf.bandcamp.com/album/a-ritual-at-dusk-light-breaks-down',
