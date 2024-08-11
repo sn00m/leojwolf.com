@@ -1,6 +1,4 @@
-const app = angular.module ('Portfolio', [
-    'ui.router',
-]);
+const app = angular.module('app', ['ngRoute']);
 
 const components = [
     require('./components/header.component'),

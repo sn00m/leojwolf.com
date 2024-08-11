@@ -2,18 +2,21 @@
   "name": "leojwolf.com",
   "version": "1.0.0",
   "description": "A site to host my music and art",
-  "main": "gulpfile.js",
+  "main": "docs/app.js",
   "directories": {
     "doc": "docs"
   },
   "dependencies": {
+    "@angular/cli": "^18.1.4",
+    "@pushrocks/gulp-browser": "^3.0.19",
+    "@uirouter/angular": "^14.0.0",
     "foundation-sites": "^6.3.1",
     "gulp": "^4.0.0",
-    "gulp-browser": "^3.0.11",
+    "gulp-browserify": "^0.5.1",
     "gulp-sass": "^5.1.0",
-    "gulp-watch": "^5.0.1"
+    "gulp-watch": "^5.0.1",
+    "sass": "1.77.6"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "preshrinkwrap": "git checkout -- npm-shrinkwrap.json",

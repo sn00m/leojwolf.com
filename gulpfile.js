@@ -1,6 +1,6 @@
 const gulp = require('gulp');
-const sass = require('gulp-sass');
-const browser = require('gulp-browser');
+const sass = require('gulp-sass')(require('sass'));
+const browser = require('@pushrocks/gulp-browser');
 
 function html () {
     gulp.src('templates/*.html')
@@ -33,4 +33,5 @@ function watch() {
     gulp.watch('assets/*', gulp.series(html));
 }
 
-gulp.watch('.', gulp.series(watch));
+gulp.task('default', gulp.series(html, css, js));
+exports.watch = gulp.series(watch);
