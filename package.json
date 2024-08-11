@@ -1,30 +1,30 @@
 {
-  "name": "conscious-pool",
+  "name": "leojwolf.com",
   "version": "1.0.0",
-  "description": "A collective featuring musicians, artists, visionaries, and creators",
+  "description": "A site to host my music and art",
   "main": "gulpfile.js",
   "directories": {
     "doc": "docs"
   },
   "dependencies": {
     "foundation-sites": "^6.3.1",
-    "gulp-browser": "^3.0.4",
-    "gulp-sass": "^3.1.0",
-    "gulp": "^3.9.1"
+    "gulp": "^4.0.0",
+    "gulp-browser": "^3.0.11",
+    "gulp-sass": "^5.1.0",
+    "gulp-watch": "^5.0.1"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "preshrinkwrap": "git checkout -- npm-shrinkwrap.json",
+    "postshrinkwrap": "git checkout -- npm-shrinkwrap.json"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/leowolf749/conscious-pool.git"
-  },
+  "repository": "https://github.com/sn00m/leojwolf.com",
   "keywords": [],
-  "author": "",
+  "author": "Leo Wolf",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/leowolf749/conscious-pool/issues"
+    "url": "https://github.com/sn00m/leojwolf.com/issues"
   },
-  "homepage": "https://github.com/leowolf749/conscious-pool#readme"
+  "homepage": "https://github.com/sn00m/leojwolf.com#readme"
 }
