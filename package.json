@@ -2,7 +2,7 @@
   "name": "leojwolf.com",
   "version": "1.0.0",
   "description": "A site to host my music and art",
-  "main": "docs/app.js",
+  "main": "gulpfile.js",
   "directories": {
     "doc": "docs"
   },
