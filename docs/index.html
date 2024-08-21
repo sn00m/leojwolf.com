@@ -24,10 +24,19 @@
     <script src="https://npmcdn.com/angular-ui-router@1.0.0-beta.3/release/angular-ui-router.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-resource.js"></script>
     <script src="https://use.fontawesome.com/87edec6078.js"></script>
-    <script id="album-template" type="x-mustache-template">
+    <script id="studio-album-template" type="x-mustache-template">
         <a href=" {{ albumLink }} ">
-            <img id="image" src=" {{ albumImage }} "/>
-            <p id="name">{{ albumName }}</p>
+            <img class="image" src=" {{ albumImage }} "/>
+            <p class="albumInfo">{{ albumName }}</p>
+            <p class="albumInfo">{{ labelName }} - {{ catNum }}</p>
+            <p class="albumInfo">{{ albumYear }}</p>
+        </a>
+    </script>
+    <script id="live-album-template" type="x-mustache-template">
+        <a href=" {{ albumLink }} ">
+            <img class="image" src=" {{ albumImage }} "/>
+            <p class="albumInfo">{{ albumName }}</p>
+            <p class="albumInfo">{{ albumYear }}</p>
         </a>
     </script>
     <script src="app.js"></script>
