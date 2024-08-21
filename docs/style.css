@@ -1568,6 +1568,7 @@ h1 a {
 .content-container .p-container {
   width: 850px;
   margin-top: 30px;
+  margin-bottom: 50px;
 }
 @media (min-width: 992px) {
   .content-container .p-container {
@@ -1580,21 +1581,6 @@ h1 a {
 @media (min-width: 992px) {
   .content-container .p-container p {
     font-size: 0.8em;
-  }
-}
-.content-container .p-container .lab-container {
-  margin-bottom: 30px;
-}
-.content-container .p-container .lab-container img {
-  display: block;
-  width: 100px;
-  margin: 0 auto;
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-@media (min-width: 992px) {
-  .content-container .p-container .lab-container img {
-    width: 70px;
   }
 }
 
@@ -1617,56 +1603,6 @@ h1 a {
 @media (min-width: 992px) {
   #social-links li a {
     padding-left: 8px;
-  }
-}
-
-#live-vid iframe {
-  display: block;
-  margin: 0 auto;
-}
-@media (min-width: 992px) {
-  #live-vid iframe {
-    display: inline-block;
-    margin: 0;
-  }
-}
-#live-vid .p-container {
-  width: 700px;
-  display: block;
-  margin: 0 auto;
-}
-@media (min-width: 992px) {
-  #live-vid .p-container {
-    display: inline-block;
-    margin: 0;
-  }
-}
-#live-vid p {
-  font-size: 1.5em;
-}
-@media (min-width: 992px) {
-  #live-vid p {
-    display: inline-block;
-    margin: 0;
-    font-size: 0.7em;
-  }
-}
-
-#events h2 {
-  font-size: 2.5em;
-  color: rgb(255, 255, 255);
-}
-@media (min-width: 992px) {
-  #events h2 {
-    font-size: 0.8em;
-  }
-}
-#events p {
-  font-size: 2em;
-}
-@media (min-width: 992px) {
-  #events p {
-    font-size: 0.8em;
   }
 }
 
@@ -1714,6 +1650,54 @@ h1 a {
 }
 @media (min-width: 992px) {
   #discography-page p {
+    font-size: 0.8em;
+  }
+}
+
+#art-page h2 {
+  font-size: 2.5em;
+  color: rgb(255, 255, 255);
+  margin-bottom: 30px;
+}
+@media (min-width: 992px) {
+  #art-page h2 {
+    font-size: 0.8em;
+  }
+}
+#art-page ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+#art-page li {
+  width: 700px;
+  margin: 0 auto;
+  margin-bottom: 70px;
+}
+@media (min-width: 992px) {
+  #art-page li {
+    width: 300px;
+    display: inline-block;
+    margin-right: 50px;
+  }
+}
+#art-page #image {
+  width: 700px;
+  height: 700px;
+}
+@media (min-width: 992px) {
+  #art-page #image {
+    width: 300px;
+    height: 300px;
+  }
+}
+#art-page #name {
+  text-align: center;
+}
+#art-page p {
+  font-size: 2em;
+}
+@media (min-width: 992px) {
+  #art-page p {
     font-size: 0.8em;
   }
 }

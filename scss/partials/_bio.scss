@@ -29,27 +29,13 @@
         }
         width: 850px;
         margin-top: 30px;
+        margin-bottom: 50px;
 
         p {
           @include lg {
             font-size: .8em;
           }
           font-size: 2em;
-        }
-
-        .lab-container {
-            margin-bottom: 30px;
-            
-            img {
-                display: block;
-                width: 100px;
-                @include lg {
-                    width: 70px;
-                }
-                margin: 0 auto;
-                margin-top: 30px;
-                margin-bottom: 30px;
-            }
         }
     }
   }

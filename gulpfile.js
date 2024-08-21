@@ -1,12 +1,14 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
-const browser = require('@pushrocks/gulp-browser');
+const browserify = require('gulp-browserify');
 
 function html () {
     gulp.src('templates/*.html')
         .pipe(gulp.dest('docs/templates'));
     gulp.src('assets/*')
         .pipe(gulp.dest('docs/assets'));
+    gulp.src('assets/discog/*')
+        .pipe(gulp.dest('docs/assets/discog'));
     return gulp.src('*.html')
         .pipe(gulp.dest('docs/'));
 }
@@ -19,7 +21,7 @@ function css () {
 
 function js () {
     return gulp.src('js/app.js')
-        .pipe(browser.browserify())
+        .pipe(browserify())
         .pipe(gulp.dest('docs/'));
 }
 
@@ -33,5 +35,5 @@ function watch() {
     gulp.watch('assets/*', gulp.series(html));
 }
 
-gulp.task('default', gulp.series(html, css, js));
+exports.default = gulp.series(html, css, js);
 exports.watch = gulp.series(watch);

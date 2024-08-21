@@ -1,4 +1,4 @@
-const app = angular.module('app', ['ui-router']);
+const app = angular.module('app', ['ui.router']);
 
 const components = [
     require('./components/header.component'),
@@ -8,6 +8,7 @@ const components = [
     require('./components/bio.component'),
     require('./components/links.component'),
     require('./components/discography.component'),
+    require('./components/art.component'),
 ];
 
 for (let i = 0; i < components.length; i++) {
@@ -15,7 +16,7 @@ for (let i = 0; i < components.length; i++) {
 };
 
 const controllers = [
-    require('./controllers/discography.controller'),
+    require('./controllers/discography.controller')
 ];
 
 for (let i = 0; i < controllers.length; i++) {
@@ -37,6 +38,11 @@ app.config(function ($stateProvider){
         url: '/discography',
         component: 'discography',
     });
+    $stateProvider.state({
+        name: 'art',
+        url: '/art',
+        component: 'art',
+    })
     $stateProvider.state({
         name: 'links',
         url: '/links',
