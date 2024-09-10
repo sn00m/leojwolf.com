@@ -16,7 +16,8 @@ for (let i = 0; i < components.length; i++) {
 };
 
 const controllers = [
-    require('./controllers/discography.controller')
+    require('./controllers/discography.controller'),
+    require('./controllers/art.controller')
 ];
 
 for (let i = 0; i < controllers.length; i++) {

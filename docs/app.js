@@ -2,6 +2,7 @@
 module.exports = {
     name: 'art',
     object: {
+        controller: 'ArtController',
         templateUrl: 'templates/art.html',
     }
 }
@@ -56,6 +57,91 @@ module.exports = {
     }
 }
 },{}],9:[function(require,module,exports){
+module.exports = {
+    name: 'ArtController',
+    func: function ($scope) {
+        $scope.load = () => {
+            const monotype = [
+                {
+                    name: 'Watcher',
+                    image: 'assets/art/Watcher.jpg',
+                    material: 'Ink on watercolor paper',
+                    size: '8x8',
+                },
+                {
+                    name: 'Smile',
+                    image: 'assets/art/Smile.jpg',
+                    material: 'Ink on watercolor paper',
+                    size: '8x8',
+                },
+                {
+                    name: 'Shadow',
+                    image: 'assets/art/Shadow.jpg',
+                    material: 'Ink on watercolor paper',
+                    size: '8x8',
+                },
+                {
+                    name: 'Vortex',
+                    image: 'assets/art/Vortex.jpg',
+                    material: 'Ink on watercolor paper',
+                    size: '8x8',
+                },
+                {
+                    name: 'You have to go out to get in',
+                    image: 'assets/art/You have to go out to get in.jpg',
+                    material: 'Ink on watercolor paper',
+                    size: '8x8',
+                },
+                {
+                    name: 'Divine Sight',
+                    image: 'assets/art/Divine Sight.jpg',
+                    material: 'Ink on watercolor paper',
+                    size: '8x8',
+                },
+                {
+                    name: 'MF001',
+                    image: 'assets/art/MF001.jpg',
+                    material: 'Ink on watercolor paper',
+                    size: '9x12',
+                },
+                {
+                    name: 'MF002',
+                    image: 'assets/art/MF002.jpg',
+                    material: 'Ink on watercolor paper',
+                    size: '9x12',
+                },
+                {
+                    name: 'MF003',
+                    image: 'assets/art/MF003.jpg',
+                    material: 'Ink on watercolor paper',
+                    size: '9x12',
+                },
+                {
+                    name: 'Refractions',
+                    image: 'assets/art/Refractions.jpg',
+                    material: 'Ink on watercolor paper',
+                    size: '9x12',
+                }
+            ];
+
+            const monotypeParent = document.querySelector('#monotypes');
+                for (let i = 0; i < monotype.length; i++) {
+                    let art = document.createElement('li');
+                    art.innerHTML = Mustache.render (
+                        document.querySelector('#art-template').innerHTML,
+                        {
+                            artName: monotype[i].name,
+                            artImage: monotype[i].image,
+                            artMaterial: monotype[i].material,
+                            artSize: monotype[i].size,
+                        }
+                    );
+                    monotypeParent.appendChild(art);
+                }
+        };
+    }
+}
+},{}],10:[function(require,module,exports){
 module.exports = {
     name: 'DiscogController',
     func: function ($scope) {
@@ -162,7 +248,7 @@ module.exports = {
         };
     }
 }
-},{}],10:[function(require,module,exports){
+},{}],11:[function(require,module,exports){
 const app = angular.module('app', ['ui.router']);
 
 const components = [
@@ -181,7 +267,8 @@ for (let i = 0; i < components.length; i++) {
 };
 
 const controllers = [
-    require('./controllers/discography.controller')
+    require('./controllers/discography.controller'),
+    require('./controllers/art.controller')
 ];
 
 for (let i = 0; i < controllers.length; i++) {
@@ -214,4 +301,4 @@ app.config(function ($stateProvider){
         component: 'links',
     });
 });
-},{"./components/art.component":1,"./components/bio.component":2,"./components/discography.component":3,"./components/footer.component":4,"./components/header.component":5,"./components/home.component":6,"./components/links.component":7,"./components/nav.component":8,"./controllers/discography.controller":9}]},{},[10])
+},{"./components/art.component":1,"./components/bio.component":2,"./components/discography.component":3,"./components/footer.component":4,"./components/header.component":5,"./components/home.component":6,"./components/links.component":7,"./components/nav.component":8,"./controllers/art.controller":9,"./controllers/discography.controller":10}]},{},[11])
