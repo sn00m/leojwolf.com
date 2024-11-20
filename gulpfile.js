@@ -11,6 +11,8 @@ function html () {
         .pipe(gulp.dest('docs/assets/discog'));
     gulp.src('assets/art/*')
         .pipe(gulp.dest('docs/assets/art'));
+    gulp.src('assets/art/*/*')
+        .pipe(gulp.dest('docs/assets/art'));
     return gulp.src('*.html')
         .pipe(gulp.dest('docs/'));
 }
