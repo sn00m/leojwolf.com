@@ -63,6 +63,13 @@ module.exports = {
         $scope.load = () => {
             const night = [
                 {
+                    name: 'wake up sweetheart',
+                    image: 'assets/art/night_garden/wake up sweetheart 1.JPG',
+                    type: 'monotype print',
+                    material: 'ink on 300g watercolor paper',
+                    size: '18x24',
+                },
+                {
                     name: 'a garden of forking paths',
                     image: 'assets/art/night_garden/a garden of forking paths 1.JPG',
                     type: 'monotype print',
@@ -70,8 +77,8 @@ module.exports = {
                     size: '18x24',
                 },
                 {
-                    name: 'wake up sweetheart',
-                    image: 'assets/art/night_garden/wake up sweetheart 1.JPG',
+                    name: 'queen of cordyceps',
+                    image: 'assets/art/night_garden/queen of cordyceps 1.JPG',
                     type: 'monotype print',
                     material: 'ink on 300g watercolor paper',
                     size: '18x24',
@@ -159,13 +166,6 @@ module.exports = {
                     type: 'monotype print',
                     material: 'ink on 300g watercolor paper',
                     size: '8x8',
-                },
-                {
-                    name: 'queen of cordyceps',
-                    image: 'assets/art/night_garden/queen of cordyceps 1.JPG',
-                    type: 'monotype print',
-                    material: 'ink on 300g watercolor paper',
-                    size: '18x24',
                 }
             ];
 
