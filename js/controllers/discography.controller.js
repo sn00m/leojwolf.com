@@ -6,7 +6,7 @@ module.exports = {
                 {
                     name: 'Leo Wolf & Teroscu',
                     image: 'assets/discog/Leo Wolf & Teroscu small.JPG',
-                    link: 'https://deadlettersarchive.bandcamp.com/album/leo-wolf-teroscu',
+                    link: 'https://blindreading.bandcamp.com/album/leo-wolf-teroscu',
                     label: 'Dead Letters Archive',
                     catalog: 'DLA002',
                     year: '2024'
