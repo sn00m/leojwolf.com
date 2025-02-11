@@ -6,7 +6,6 @@ const components = [
     require('./components/footer.component'),
     require('./components/home.component'),
     require('./components/bio.component'),
-    require('./components/links.component'),
     require('./components/discography.component'),
     require('./components/art.component'),
 ];
@@ -44,9 +43,4 @@ app.config(function ($stateProvider){
         url: '/art',
         component: 'art',
     })
-    $stateProvider.state({
-        name: 'links',
-        url: '/links',
-        component: 'links',
-    });
 });

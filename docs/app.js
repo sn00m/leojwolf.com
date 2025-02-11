@@ -44,19 +44,12 @@ module.exports = {
 }
 },{}],7:[function(require,module,exports){
 module.exports = {
-    name: 'links',
-    object: {
-        templateUrl: 'templates/links.html',
-    }
-}
-},{}],8:[function(require,module,exports){
-module.exports = {
     name: 'navSection',
     object: {
         templateUrl: 'templates/nav.html',
     }
 }
-},{}],9:[function(require,module,exports){
+},{}],8:[function(require,module,exports){
 module.exports = {
     name: 'ArtController',
     func: function ($scope) {
@@ -295,7 +288,7 @@ module.exports = {
         };
     }
 }
-},{}],10:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
 module.exports = {
     name: 'DiscogController',
     func: function ($scope) {
@@ -402,7 +395,7 @@ module.exports = {
         };
     }
 }
-},{}],11:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 const app = angular.module('app', ['ui.router']);
 
 const components = [
@@ -411,7 +404,6 @@ const components = [
     require('./components/footer.component'),
     require('./components/home.component'),
     require('./components/bio.component'),
-    require('./components/links.component'),
     require('./components/discography.component'),
     require('./components/art.component'),
 ];
@@ -449,10 +441,5 @@ app.config(function ($stateProvider){
         url: '/art',
         component: 'art',
     })
-    $stateProvider.state({
-        name: 'links',
-        url: '/links',
-        component: 'links',
-    });
 });
-},{"./components/art.component":1,"./components/bio.component":2,"./components/discography.component":3,"./components/footer.component":4,"./components/header.component":5,"./components/home.component":6,"./components/links.component":7,"./components/nav.component":8,"./controllers/art.controller":9,"./controllers/discography.controller":10}]},{},[11])
+},{"./components/art.component":1,"./components/bio.component":2,"./components/discography.component":3,"./components/footer.component":4,"./components/header.component":5,"./components/home.component":6,"./components/nav.component":7,"./controllers/art.controller":8,"./controllers/discography.controller":9}]},{},[10])

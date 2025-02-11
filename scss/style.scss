@@ -41,6 +41,7 @@ body {
 
 a {
     text-decoration: none;
+    color: rgb(255, 255, 255);
 }
 
 p {
@@ -52,7 +53,6 @@ p {
 @import 'partials/nav';
 @import 'partials/home';
 @import 'partials/bio';
-@import 'partials/links';
 @import 'partials/discography';
 @import 'partials/art';
 @import 'partials/footer';

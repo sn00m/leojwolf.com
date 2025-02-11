@@ -1432,6 +1432,7 @@ body {
 
 a {
   text-decoration: none;
+  color: rgb(255, 255, 255);
 }
 
 p {
@@ -1584,26 +1585,34 @@ h1 a {
     font-size: 0.8em;
   }
 }
-
-#links li {
+.content-container h3 {
+  font-size: 2.5em;
   color: rgb(255, 255, 255);
-  list-style-type: none;
-  display: inline-block;
-  font-size: 2em;
+  margin-bottom: 10px;
 }
 @media (min-width: 992px) {
-  #links li {
+  .content-container h3 {
     font-size: 0.8em;
-    display: block;
-    margin-bottom: 10px;
   }
 }
-#links li a {
+.content-container ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+.content-container #links {
+  width: 700px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  font-size: 2em;
   color: rgb(255, 255, 255);
 }
 @media (min-width: 992px) {
-  #links li a {
-    padding-left: 8px;
+  .content-container #links {
+    width: 300px;
+    display: inline-block;
+    margin-right: 50px;
+    font-size: 0.8em;
+    color: rgb(255, 255, 255);
   }
 }
 

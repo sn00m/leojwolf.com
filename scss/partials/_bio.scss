@@ -38,4 +38,33 @@
           font-size: 2em;
         }
     }
+
+    h3 {
+      font-size: 2.5em;
+      @include lg {
+        font-size: .8em;
+      }
+      color: rgb(255, 255, 255);
+      margin-bottom: 10px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    #links {
+      width: 700px;
+      margin: 0 auto;
+      @include lg {
+          width: 300px;
+          display: inline-block;
+          margin-right: 50px;
+          font-size: .8em;
+          color: rgb(255, 255, 255);
+      }
+      margin-bottom: 20px;
+      font-size: 2em;
+      color: rgb(255, 255, 255);
+    }
   }
