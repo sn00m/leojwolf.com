@@ -42,9 +42,18 @@
     h3 {
       font-size: 2.5em;
       @include lg {
-        font-size: .8em;
+        font-size: 1em;
       }
       color: rgb(255, 255, 255);
+      margin-bottom: 10px;
+    }
+
+    h4 {
+      font-size: 1.5em;
+      @include lg {
+        font-size: .7em;
+      }
+      color: rgb(174, 174, 174);
       margin-bottom: 10px;
     }
 
@@ -53,10 +62,27 @@
       padding-left: 0;
     }
 
+    .list {
+      list-style-type: "- ";
+      margin: 0 auto;
+      @include lg {
+          display: inline-block;
+          list-style-type: "- ";
+          margin-right: 50px;
+          font-size: .8em;
+          color: rgb(255, 255, 255);
+      }
+      margin-bottom: 20px;
+      font-size: 2em;
+      color: rgb(255, 255, 255);
+    }
+
     #links {
+      list-style-type: "- ";
       width: 700px;
       margin: 0 auto;
       @include lg {
+          list-style-type: "- ";
           width: 300px;
           display: inline-block;
           margin-right: 50px;

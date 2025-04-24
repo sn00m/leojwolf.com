@@ -1592,14 +1592,41 @@ h1 a {
 }
 @media (min-width: 992px) {
   .content-container h3 {
-    font-size: 0.8em;
+    font-size: 1em;
+  }
+}
+.content-container h4 {
+  font-size: 1.5em;
+  color: rgb(174, 174, 174);
+  margin-bottom: 10px;
+}
+@media (min-width: 992px) {
+  .content-container h4 {
+    font-size: 0.7em;
   }
 }
 .content-container ul {
   list-style-type: none;
   padding-left: 0;
 }
+.content-container .list {
+  list-style-type: "- ";
+  margin: 0 auto;
+  margin-bottom: 20px;
+  font-size: 2em;
+  color: rgb(255, 255, 255);
+}
+@media (min-width: 992px) {
+  .content-container .list {
+    display: inline-block;
+    list-style-type: "- ";
+    margin-right: 50px;
+    font-size: 0.8em;
+    color: rgb(255, 255, 255);
+  }
+}
 .content-container #links {
+  list-style-type: "- ";
   width: 700px;
   margin: 0 auto;
   margin-bottom: 20px;
@@ -1608,6 +1635,7 @@ h1 a {
 }
 @media (min-width: 992px) {
   .content-container #links {
+    list-style-type: "- ";
     width: 300px;
     display: inline-block;
     margin-right: 50px;
@@ -1623,7 +1651,7 @@ h1 a {
 }
 @media (min-width: 992px) {
   #discography-page h2 {
-    font-size: 0.8em;
+    font-size: 1em;
   }
 }
 #discography-page ul {
@@ -1671,7 +1699,7 @@ h1 a {
 }
 @media (min-width: 992px) {
   #art-page h2 {
-    font-size: 0.8em;
+    font-size: 1em;
   }
 }
 #art-page ul {
