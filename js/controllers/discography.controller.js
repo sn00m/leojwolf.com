@@ -4,6 +4,14 @@ module.exports = {
         $scope.load = () => {
             const albums = [
                 {
+                    name: 'I saw your shadow on the wall',
+                    image: 'assets/discog/isysotw album cover.png',
+                    link: 'https://leowolf.bandcamp.com/album/i-saw-your-shadow-on-the-wall',
+                    label: '-',
+                    catalog: '-',
+                    year: '2025'
+                },
+                {
                     name: 'Leo Wolf & Teroscu',
                     image: 'assets/discog/Leo Wolf & Teroscu small.JPG',
                     link: 'https://blindreading.bandcamp.com/album/leo-wolf-teroscu',
