@@ -6,7 +6,13 @@ const components = [
     require('./components/footer.component'),
     require('./components/home.component'),
     require('./components/bio.component'),
+    require('./components/cv.component'),
     require('./components/discography.component'),
+    require('./components/releases/isysotw.component'),
+    require('./components/releases/leotero.component'),
+    require('./components/releases/shapeshift.component'),
+    require('./components/releases/magnolia.component'),
+    require('./components/releases/dragon.component'),
     require('./components/art.component'),
 ];
 
@@ -15,7 +21,6 @@ for (let i = 0; i < components.length; i++) {
 };
 
 const controllers = [
-    require('./controllers/discography.controller'),
     require('./controllers/art.controller')
 ];
 
@@ -34,9 +39,39 @@ app.config(function ($stateProvider){
         component: 'bio',
     });
     $stateProvider.state({
+        name: 'cv',
+        url: '/cv',
+        component: 'cv',
+    });
+    $stateProvider.state({
         name: 'discography',
         url: '/discography',
         component: 'discography',
+    });
+    $stateProvider.state({
+        name: 'isysotw',
+        url: '/releases/i-saw-your-shadow-on-the-wall',
+        component: 'isysotw',
+    });
+    $stateProvider.state({
+        name: 'leotero',
+        url: '/releases/leo-wolf-&-teroscu',
+        component: 'leotero',
+    });
+    $stateProvider.state({
+        name: 'shapeshifter',
+        url: '/releases/shapeshifter',
+        component: 'shapeshifter',
+    });
+    $stateProvider.state({
+        name: 'magnolia',
+        url: '/releases/magnolia',
+        component: 'magnolia',
+    });
+    $stateProvider.state({
+        name: 'dragon',
+        url: '/releases/dragon',
+        component: 'dragon',
     });
     $stateProvider.state({
         name: 'art',

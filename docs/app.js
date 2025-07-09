@@ -15,41 +15,82 @@ module.exports = {
 }
 },{}],3:[function(require,module,exports){
 module.exports = {
-    name: 'discography',
+    name: 'cv',
     object: {
-        controller: 'DiscogController',
-        templateUrl: 'templates/discography.html',
+        templateUrl: 'templates/cv.html',
     }
 }
 },{}],4:[function(require,module,exports){
+module.exports = {
+    name: 'discography',
+    object: {
+        templateUrl: 'templates/discography.html',
+    }
+}
+},{}],5:[function(require,module,exports){
 module.exports = {
     name: 'footerSection',
     object: {
         templateUrl: 'templates/footer.html',
     }
 }
-},{}],5:[function(require,module,exports){
+},{}],6:[function(require,module,exports){
 module.exports = {
     name: 'headerSection',
     object: {
         templateUrl: 'templates/header.html',
     }
 }
-},{}],6:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
 module.exports = {
     name: 'home',
     object: {
         templateUrl: 'templates/home.html',
     }
 }
-},{}],7:[function(require,module,exports){
+},{}],8:[function(require,module,exports){
 module.exports = {
     name: 'navSection',
     object: {
         templateUrl: 'templates/nav.html',
     }
 }
-},{}],8:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
+module.exports = {
+    name: 'dragon',
+    object: {
+        templateUrl: 'templates/releases/dragon.html',
+    }
+}
+},{}],10:[function(require,module,exports){
+module.exports = {
+    name: 'isysotw',
+    object: {
+        templateUrl: 'templates/releases/isysotw.html',
+    }
+}
+},{}],11:[function(require,module,exports){
+module.exports = {
+    name: 'leotero',
+    object: {
+        templateUrl: 'templates/releases/leotero.html',
+    }
+}
+},{}],12:[function(require,module,exports){
+module.exports = {
+    name: 'magnolia',
+    object: {
+        templateUrl: 'templates/releases/magnolia.html',
+    }
+}
+},{}],13:[function(require,module,exports){
+module.exports = {
+    name: 'shapeshifter',
+    object: {
+        templateUrl: 'templates/releases/shapeshift.html',
+    }
+}
+},{}],14:[function(require,module,exports){
 module.exports = {
     name: 'ArtController',
     func: function ($scope) {
@@ -288,74 +329,7 @@ module.exports = {
         };
     }
 }
-},{}],9:[function(require,module,exports){
-module.exports = {
-    name: 'DiscogController',
-    func: function ($scope) {
-        $scope.load = () => {
-            const albums = [
-                {
-                    name: 'I saw your shadow on the wall',
-                    image: 'assets/discog/isysotw album cover.png',
-                    link: 'https://leowolf.bandcamp.com/album/i-saw-your-shadow-on-the-wall',
-                    format: 'Cassette',
-                    label: 'Blind Reading',
-                    year: '2025'
-                },
-                {
-                    name: 'Leo Wolf & Teroscu',
-                    image: 'assets/discog/Leo Wolf & Teroscu small.JPG',
-                    link: 'https://blindreading.bandcamp.com/album/leo-wolf-teroscu',
-                    format: 'Cassette/CD',
-                    label: 'Dead Letters Archive',
-                    year: '2024'
-                },
-                {
-                    name: 'Shapeshifter',
-                    image: 'assets/discog/Shapeshifter Cover.JPG',
-                    link: 'https://leowolf.bandcamp.com/album/shapeshifter',
-                    format: 'LP',
-                    label: 'Dead Letters Archive',
-                    year: '2023'
-                },
-                {
-                    name: 'Magnolia',
-                    image: 'assets/discog/Magnolia Album Cover w filter.jpg',
-                    link: 'https://leowolf.bandcamp.com/album/magnolia',
-                    format: 'Cassette',
-                    label: 'Sinetology',
-                    year: '2020'
-                },
-                {
-                    name: 'Dragon',
-                    image: 'assets/discog/Dragon-Album-Art-3750x3750.jpg',
-                    link: 'https://leowolf.bandcamp.com/album/dragon',
-                    format: 'Cassette',
-                    label: 'Sinetology',
-                    year: '2020'
-                },
-            ];
-
-            const discogParent = document.querySelector('#albums-list');
-                for (let i = 0; i < albums.length; i++) {
-                    let album = document.createElement('li');
-                    album.innerHTML = Mustache.render (
-                        document.querySelector('#discography-template').innerHTML,
-                        {
-                            albumName: albums[i].name,
-                            albumYear: albums[i].year,
-                            albumImage: albums[i].image,
-                            albumLink: albums[i].link,
-                            format: albums[i].format,
-                            labelName: albums[i].label,
-                        }
-                    );
-                    discogParent.appendChild(album);
-                }
-        };
-    }
-}
-},{}],10:[function(require,module,exports){
+},{}],15:[function(require,module,exports){
 const app = angular.module('app', ['ui.router']);
 
 const components = [
@@ -364,7 +338,13 @@ const components = [
     require('./components/footer.component'),
     require('./components/home.component'),
     require('./components/bio.component'),
+    require('./components/cv.component'),
     require('./components/discography.component'),
+    require('./components/releases/isysotw.component'),
+    require('./components/releases/leotero.component'),
+    require('./components/releases/shapeshift.component'),
+    require('./components/releases/magnolia.component'),
+    require('./components/releases/dragon.component'),
     require('./components/art.component'),
 ];
 
@@ -373,7 +353,6 @@ for (let i = 0; i < components.length; i++) {
 };
 
 const controllers = [
-    require('./controllers/discography.controller'),
     require('./controllers/art.controller')
 ];
 
@@ -392,9 +371,39 @@ app.config(function ($stateProvider){
         component: 'bio',
     });
     $stateProvider.state({
+        name: 'cv',
+        url: '/cv',
+        component: 'cv',
+    });
+    $stateProvider.state({
         name: 'discography',
         url: '/discography',
         component: 'discography',
+    });
+    $stateProvider.state({
+        name: 'isysotw',
+        url: '/releases/i-saw-your-shadow-on-the-wall',
+        component: 'isysotw',
+    });
+    $stateProvider.state({
+        name: 'leotero',
+        url: '/releases/leo-wolf-&-teroscu',
+        component: 'leotero',
+    });
+    $stateProvider.state({
+        name: 'shapeshifter',
+        url: '/releases/shapeshifter',
+        component: 'shapeshifter',
+    });
+    $stateProvider.state({
+        name: 'magnolia',
+        url: '/releases/magnolia',
+        component: 'magnolia',
+    });
+    $stateProvider.state({
+        name: 'dragon',
+        url: '/releases/dragon',
+        component: 'dragon',
     });
     $stateProvider.state({
         name: 'art',
@@ -402,4 +411,4 @@ app.config(function ($stateProvider){
         component: 'art',
     })
 });
-},{"./components/art.component":1,"./components/bio.component":2,"./components/discography.component":3,"./components/footer.component":4,"./components/header.component":5,"./components/home.component":6,"./components/nav.component":7,"./controllers/art.controller":8,"./controllers/discography.controller":9}]},{},[10])
+},{"./components/art.component":1,"./components/bio.component":2,"./components/cv.component":3,"./components/discography.component":4,"./components/footer.component":5,"./components/header.component":6,"./components/home.component":7,"./components/nav.component":8,"./components/releases/dragon.component":9,"./components/releases/isysotw.component":10,"./components/releases/leotero.component":11,"./components/releases/magnolia.component":12,"./components/releases/shapeshift.component":13,"./controllers/art.controller":14}]},{},[15])

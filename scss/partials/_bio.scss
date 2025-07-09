@@ -63,11 +63,11 @@
     }
 
     .list {
-      list-style-type: "- ";
+      list-style-type: none;
       margin: 0 auto;
       @include lg {
           display: inline-block;
-          list-style-type: "- ";
+          list-style-type: none;
           margin-right: 50px;
           font-size: .8em;
           color: rgb(255, 255, 255);

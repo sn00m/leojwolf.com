@@ -1,0 +1,38 @@
+.album-page {
+    h2 {
+        font-size: 2.5em;
+        @include lg {
+          font-size: 1em;
+        }
+        color: rgb(255, 255, 255);
+        margin-bottom: 30px;
+    }
+
+    .album-description {
+        width: 100%;
+        @include lg {
+          font-size: .8em;
+          width: 50%;
+          display: inline-block;
+          float: left;
+          margin-right: 20px;
+          top: 0;
+        }
+        font-size: 2em;
+    }
+
+    .album-embed {
+        @include lg {
+            width: 40%;
+            display: inline-block;
+        }
+    }
+
+    iframe {
+        width: 100%;
+        @include lg {
+            width: 300px;
+            height: 703px;
+        }
+    }
+}

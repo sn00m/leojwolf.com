@@ -5,6 +5,8 @@ const browserify = require('gulp-browserify');
 function html () {
     gulp.src('templates/*.html')
         .pipe(gulp.dest('docs/templates'));
+    gulp.src('templates/releases/*.html')
+        .pipe(gulp.dest('docs/templates/releases'));
     gulp.src('assets/*')
         .pipe(gulp.dest('docs/assets'));
     gulp.src('assets/discog/*')
@@ -36,6 +38,7 @@ function watch() {
     gulp.watch('scss/partials/*.scss', gulp.series(css));
     gulp.watch('*.html', gulp.series(html));
     gulp.watch('templates/*.html', gulp.series(html));
+    gulp.watch('templates/releases/*.html', gulp.series(html));
     gulp.watch('assets/*', gulp.series(html));
 }
 

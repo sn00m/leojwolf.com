@@ -1610,7 +1610,7 @@ h1 a {
   padding-left: 0;
 }
 .content-container .list {
-  list-style-type: "- ";
+  list-style-type: none;
   margin: 0 auto;
   margin-bottom: 20px;
   font-size: 2em;
@@ -1619,7 +1619,7 @@ h1 a {
 @media (min-width: 992px) {
   .content-container .list {
     display: inline-block;
-    list-style-type: "- ";
+    list-style-type: none;
     margin-right: 50px;
     font-size: 0.8em;
     color: rgb(255, 255, 255);
@@ -1657,6 +1657,7 @@ h1 a {
 #discography-page ul {
   list-style-type: none;
   padding-left: 0;
+  width: 100%;
 }
 #discography-page li {
   width: 700px;
@@ -1682,6 +1683,7 @@ h1 a {
 }
 #discography-page .albumInfo {
   text-align: left;
+  font-style: italic;
 }
 #discography-page p {
   font-size: 2em;
@@ -1689,6 +1691,46 @@ h1 a {
 @media (min-width: 992px) {
   #discography-page p {
     font-size: 0.8em;
+  }
+}
+
+.album-page h2 {
+  font-size: 2.5em;
+  color: rgb(255, 255, 255);
+  margin-bottom: 30px;
+}
+@media (min-width: 992px) {
+  .album-page h2 {
+    font-size: 1em;
+  }
+}
+.album-page .album-description {
+  width: 100%;
+  font-size: 2em;
+}
+@media (min-width: 992px) {
+  .album-page .album-description {
+    font-size: 0.8em;
+    width: 50%;
+    display: inline-block;
+    float: left;
+    margin-right: 20px;
+    top: 0;
+  }
+}
+@media (min-width: 992px) {
+  .album-page .album-embed {
+    width: 40%;
+    display: inline-block;
+  }
+}
+.album-page iframe {
+  width: 100%;
+}
+@media (min-width: 992px) {
+  .album-page iframe {
+    width: 300px;
+    height: 703px;
   }
 }
 
