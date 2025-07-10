@@ -28,6 +28,18 @@
         }
     }
 
+    .desktop {
+        @include xs {
+            display: none;
+        }
+    }
+
+    .mobile {
+        @include lg {
+            display: none;
+        }
+    }
+
     iframe {
         width: 100%;
         @include lg {
