@@ -92,6 +92,13 @@ module.exports = {
 }
 },{}],14:[function(require,module,exports){
 module.exports = {
+    name: 'veiled',
+    object: {
+        templateUrl: 'templates/releases/veiled.html',
+    }
+}
+},{}],15:[function(require,module,exports){
+module.exports = {
     name: 'ArtController',
     func: function ($scope) {
         $scope.load = () => {
@@ -329,7 +336,7 @@ module.exports = {
         };
     }
 }
-},{}],15:[function(require,module,exports){
+},{}],16:[function(require,module,exports){
 const app = angular.module('app', ['ui.router']);
 
 const components = [
@@ -340,6 +347,7 @@ const components = [
     require('./components/bio.component'),
     require('./components/cv.component'),
     require('./components/discography.component'),
+    require('./components/releases/veiled.component'),
     require('./components/releases/isysotw.component'),
     require('./components/releases/leotero.component'),
     require('./components/releases/shapeshift.component'),
@@ -381,6 +389,11 @@ app.config(function ($stateProvider){
         component: 'discography',
     });
     $stateProvider.state({
+        name: 'veiled',
+        url: '/releases/veiled-in-light',
+        component: 'veiled',
+    });
+    $stateProvider.state({
         name: 'isysotw',
         url: '/releases/i-saw-your-shadow-on-the-wall',
         component: 'isysotw',
@@ -411,4 +424,4 @@ app.config(function ($stateProvider){
         component: 'art',
     })
 });
-},{"./components/art.component":1,"./components/bio.component":2,"./components/cv.component":3,"./components/discography.component":4,"./components/footer.component":5,"./components/header.component":6,"./components/home.component":7,"./components/nav.component":8,"./components/releases/dragon.component":9,"./components/releases/isysotw.component":10,"./components/releases/leotero.component":11,"./components/releases/magnolia.component":12,"./components/releases/shapeshift.component":13,"./controllers/art.controller":14}]},{},[15])
+},{"./components/art.component":1,"./components/bio.component":2,"./components/cv.component":3,"./components/discography.component":4,"./components/footer.component":5,"./components/header.component":6,"./components/home.component":7,"./components/nav.component":8,"./components/releases/dragon.component":9,"./components/releases/isysotw.component":10,"./components/releases/leotero.component":11,"./components/releases/magnolia.component":12,"./components/releases/shapeshift.component":13,"./components/releases/veiled.component":14,"./controllers/art.controller":15}]},{},[16])
