@@ -20,9 +20,9 @@
 
     iframe {
         width: 100%;
-        @include lg {
-            width: 500px;
-            height: 703px;
-        }
+        // @include lg {
+        //     width: 500px;
+        //     height: 703px;
+        // }
     }
 }
