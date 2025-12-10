@@ -15,6 +15,7 @@ const components = [
     require('./components/releases/magnolia.component'),
     require('./components/releases/dragon.component'),
     require('./components/art.component'),
+    require('./components/private.component'),
 ];
 
 for (let i = 0; i < components.length; i++) {
@@ -83,5 +84,10 @@ app.config(function ($stateProvider){
         name: 'art',
         url: '/art',
         component: 'art',
+    });
+        $stateProvider.state({
+        name: 'private',
+        url: '/private',
+        component: 'private',
     })
 });

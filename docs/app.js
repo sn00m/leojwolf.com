@@ -57,47 +57,54 @@ module.exports = {
 }
 },{}],9:[function(require,module,exports){
 module.exports = {
+    name: 'private',
+    object: {
+        templateUrl: 'templates/private.html',
+    }
+}
+},{}],10:[function(require,module,exports){
+module.exports = {
     name: 'dragon',
     object: {
         templateUrl: 'templates/releases/dragon.html',
     }
 }
-},{}],10:[function(require,module,exports){
+},{}],11:[function(require,module,exports){
 module.exports = {
     name: 'isysotw',
     object: {
         templateUrl: 'templates/releases/isysotw.html',
     }
 }
-},{}],11:[function(require,module,exports){
+},{}],12:[function(require,module,exports){
 module.exports = {
     name: 'leotero',
     object: {
         templateUrl: 'templates/releases/leotero.html',
     }
 }
-},{}],12:[function(require,module,exports){
+},{}],13:[function(require,module,exports){
 module.exports = {
     name: 'magnolia',
     object: {
         templateUrl: 'templates/releases/magnolia.html',
     }
 }
-},{}],13:[function(require,module,exports){
+},{}],14:[function(require,module,exports){
 module.exports = {
     name: 'shapeshifter',
     object: {
         templateUrl: 'templates/releases/shapeshift.html',
     }
 }
-},{}],14:[function(require,module,exports){
+},{}],15:[function(require,module,exports){
 module.exports = {
     name: 'veiled',
     object: {
         templateUrl: 'templates/releases/veiled.html',
     }
 }
-},{}],15:[function(require,module,exports){
+},{}],16:[function(require,module,exports){
 module.exports = {
     name: 'ArtController',
     func: function ($scope) {
@@ -336,7 +343,7 @@ module.exports = {
         };
     }
 }
-},{}],16:[function(require,module,exports){
+},{}],17:[function(require,module,exports){
 const app = angular.module('app', ['ui.router']);
 
 const components = [
@@ -354,6 +361,7 @@ const components = [
     require('./components/releases/magnolia.component'),
     require('./components/releases/dragon.component'),
     require('./components/art.component'),
+    require('./components/private.component'),
 ];
 
 for (let i = 0; i < components.length; i++) {
@@ -422,6 +430,11 @@ app.config(function ($stateProvider){
         name: 'art',
         url: '/art',
         component: 'art',
+    });
+        $stateProvider.state({
+        name: 'private',
+        url: '/private',
+        component: 'private',
     })
 });
-},{"./components/art.component":1,"./components/bio.component":2,"./components/cv.component":3,"./components/discography.component":4,"./components/footer.component":5,"./components/header.component":6,"./components/home.component":7,"./components/nav.component":8,"./components/releases/dragon.component":9,"./components/releases/isysotw.component":10,"./components/releases/leotero.component":11,"./components/releases/magnolia.component":12,"./components/releases/shapeshift.component":13,"./components/releases/veiled.component":14,"./controllers/art.controller":15}]},{},[16])
+},{"./components/art.component":1,"./components/bio.component":2,"./components/cv.component":3,"./components/discography.component":4,"./components/footer.component":5,"./components/header.component":6,"./components/home.component":7,"./components/nav.component":8,"./components/private.component":9,"./components/releases/dragon.component":10,"./components/releases/isysotw.component":11,"./components/releases/leotero.component":12,"./components/releases/magnolia.component":13,"./components/releases/shapeshift.component":14,"./components/releases/veiled.component":15,"./controllers/art.controller":16}]},{},[17])
