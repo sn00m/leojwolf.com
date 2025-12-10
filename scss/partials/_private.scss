@@ -1,0 +1,28 @@
+.private-page {
+    .private-embed {
+        @include lg {
+            width: 100%;
+            display: inline-block;
+        }
+    }
+
+    .desktop {
+        @include xs {
+            display: none;
+        }
+    }
+
+    .mobile {
+        @include lg {
+            display: none;
+        }
+    }
+
+    iframe {
+        width: 100%;
+        @include lg {
+            width: 300px;
+            height: 703px;
+        }
+    }
+}
