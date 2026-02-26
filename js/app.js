@@ -8,6 +8,7 @@ const components = [
     require('./components/bio.component'),
     require('./components/cv.component'),
     require('./components/discography.component'),
+    require('./components/releases/fp.component'),
     require('./components/releases/veiled.component'),
     require('./components/releases/isysotw.component'),
     require('./components/releases/leotero.component'),
@@ -49,6 +50,11 @@ app.config(function ($stateProvider){
         name: 'discography',
         url: '/discography',
         component: 'discography',
+    });
+    $stateProvider.state({
+        name: 'fp',
+        url: '/releases/faces-phases',
+        component: 'fp',
     });
     $stateProvider.state({
         name: 'veiled',

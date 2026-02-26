@@ -71,40 +71,47 @@ module.exports = {
 }
 },{}],11:[function(require,module,exports){
 module.exports = {
+    name: 'fp',
+    object: {
+        templateUrl: 'templates/releases/fp.html',
+    }
+}
+},{}],12:[function(require,module,exports){
+module.exports = {
     name: 'isysotw',
     object: {
         templateUrl: 'templates/releases/isysotw.html',
     }
 }
-},{}],12:[function(require,module,exports){
+},{}],13:[function(require,module,exports){
 module.exports = {
     name: 'leotero',
     object: {
         templateUrl: 'templates/releases/leotero.html',
     }
 }
-},{}],13:[function(require,module,exports){
+},{}],14:[function(require,module,exports){
 module.exports = {
     name: 'magnolia',
     object: {
         templateUrl: 'templates/releases/magnolia.html',
     }
 }
-},{}],14:[function(require,module,exports){
+},{}],15:[function(require,module,exports){
 module.exports = {
     name: 'shapeshifter',
     object: {
         templateUrl: 'templates/releases/shapeshift.html',
     }
 }
-},{}],15:[function(require,module,exports){
+},{}],16:[function(require,module,exports){
 module.exports = {
     name: 'veiled',
     object: {
         templateUrl: 'templates/releases/veiled.html',
     }
 }
-},{}],16:[function(require,module,exports){
+},{}],17:[function(require,module,exports){
 module.exports = {
     name: 'ArtController',
     func: function ($scope) {
@@ -343,7 +350,7 @@ module.exports = {
         };
     }
 }
-},{}],17:[function(require,module,exports){
+},{}],18:[function(require,module,exports){
 const app = angular.module('app', ['ui.router']);
 
 const components = [
@@ -354,6 +361,7 @@ const components = [
     require('./components/bio.component'),
     require('./components/cv.component'),
     require('./components/discography.component'),
+    require('./components/releases/fp.component'),
     require('./components/releases/veiled.component'),
     require('./components/releases/isysotw.component'),
     require('./components/releases/leotero.component'),
@@ -397,6 +405,11 @@ app.config(function ($stateProvider){
         component: 'discography',
     });
     $stateProvider.state({
+        name: 'fp',
+        url: '/releases/faces-phases',
+        component: 'fp',
+    });
+    $stateProvider.state({
         name: 'veiled',
         url: '/releases/veiled-in-light',
         component: 'veiled',
@@ -437,4 +450,4 @@ app.config(function ($stateProvider){
         component: 'private',
     })
 });
-},{"./components/art.component":1,"./components/bio.component":2,"./components/cv.component":3,"./components/discography.component":4,"./components/footer.component":5,"./components/header.component":6,"./components/home.component":7,"./components/nav.component":8,"./components/private.component":9,"./components/releases/dragon.component":10,"./components/releases/isysotw.component":11,"./components/releases/leotero.component":12,"./components/releases/magnolia.component":13,"./components/releases/shapeshift.component":14,"./components/releases/veiled.component":15,"./controllers/art.controller":16}]},{},[17])
+},{"./components/art.component":1,"./components/bio.component":2,"./components/cv.component":3,"./components/discography.component":4,"./components/footer.component":5,"./components/header.component":6,"./components/home.component":7,"./components/nav.component":8,"./components/private.component":9,"./components/releases/dragon.component":10,"./components/releases/fp.component":11,"./components/releases/isysotw.component":12,"./components/releases/leotero.component":13,"./components/releases/magnolia.component":14,"./components/releases/shapeshift.component":15,"./components/releases/veiled.component":16,"./controllers/art.controller":17}]},{},[18])
