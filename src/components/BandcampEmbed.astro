@@ -1,0 +1,18 @@
+---
+interface Props {
+  albumId: string;
+  url: string;
+  linkText: string;
+}
+
+const { albumId, url, linkText } = Astro.props;
+const desktopSrc = `https://bandcamp.com/EmbeddedPlayer/album=${albumId}/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/transparent=true/`;
+const mobileSrc = `https://bandcamp.com/EmbeddedPlayer/album=${albumId}/size=large/bgcol=333333/linkcol=ffffff/minimal=true/transparent=true/`;
+---
+
+<div class="album-embed desktop">
+    <iframe style="border: 0; width: 350px; height: 470px;" src={desktopSrc} seamless><a href={url}>{linkText}</a></iframe>
+</div>
+<div class="album-embed mobile">
+    <iframe style="border: 0; width: 700px; height: 700px;" src={mobileSrc} seamless><a href={url}>{linkText}</a></iframe>
+</div>

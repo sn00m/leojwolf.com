@@ -1,0 +1,29 @@
+---
+interface Props {
+  slug: string;
+  artist: string;
+  albumTitle: string;
+  coverImage: string;
+  releaseDate: Date;
+  format: string;
+  label: string;
+}
+
+const { slug, artist, albumTitle, coverImage, releaseDate, format, label } = Astro.props;
+const releaseDateLabel = releaseDate.toLocaleDateString('en-US', {
+  timeZone: 'UTC',
+  month: '2-digit',
+  day: '2-digit',
+  year: 'numeric',
+});
+---
+
+<li>
+    <a href={`/releases/${slug}`}>
+        <img class="image" src={coverImage} />
+        <p style="font-weight:bold">{artist} - {albumTitle}</p>
+        <p class="albumInfo">Release Date - {releaseDateLabel}</p>
+        <p class="albumInfo">Format - {format}</p>
+        <p class="albumInfo">Label - {label}</p>
+    </a>
+</li>

@@ -1,0 +1,17 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const releases = await getCollection('releases');
+const [latest] = releases.sort((a, b) => b.data.releaseDate.valueOf() - a.data.releaseDate.valueOf());
+---
+
+<BaseLayout>
+    <section class="content-container">
+        <div class="img-container">
+            <a href={`/releases/${latest.id}`}>
+                <img src={latest.data.coverImage} />
+            </a>
+        </div>
+    </section>
+</BaseLayout>
