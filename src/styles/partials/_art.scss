@@ -14,10 +14,12 @@
     }
 
     li {
-        width: 700px;
+        width: 100%;
+        max-width: 700px;
         margin: 0 auto;
         @include lg {
             width: 300px;
+            max-width: none;
             display: inline-block;
             margin-right: 50px;
         }
@@ -25,10 +27,12 @@
     }
 
     .image {
-        width: 700px;
+        width: 100%;
+        max-width: 700px;
         height: auto;
         @include lg {
             width: 300px;
+            max-width: none;
             height: auto;
         }
     }
