@@ -1,33 +1,11 @@
 .content-container {
-    width: 90%;
-    margin-bottom: 200px;
-    margin-left: 50px;
-    padding-top: 70px;
-    @include lg {
-      padding-top: 0px;
-      padding-left: 40px;
-    }
-
-    .img-container {
-      @include lg {
-          margin: 0 auto;
-      }
-      img {
-          width: 100%;
-          border-radius: 0.5%;
-          margin-top: 20px;
-          @include lg {
-            width: 70%;
-            margin-top: 0;
-          }
-        }
-    }
-
     .p-container {
+        width: 100%;
+        max-width: 850px;
         @include lg {
           width: 583px;
+          max-width: none;
         }
-        width: 850px;
         margin-top: 30px;
         margin-bottom: 50px;
 
