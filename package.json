@@ -1,28 +1,16 @@
 {
   "name": "leojwolf.com",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "A site to host my music and art",
-  "main": "gulpfile.js",
-  "directories": {
-    "doc": "docs"
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
   },
   "dependencies": {
-    "@angular/cli": "^18.1.4",
-    "@uirouter/angular": "^14.0.0",
-    "browser-sync": "^3.0.2",
-    "browserify": "^17.0.0",
-    "foundation-sites": "^6.3.1",
-    "gulp": "^4.0.0",
-    "gulp-browserify": "^0.5.1",
-    "gulp-sass": "^5.1.0",
-    "gulp-watch": "^5.0.1",
-    "rollup": "^4.20.0",
-    "sass": "1.77.6"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "preshrinkwrap": "git checkout -- npm-shrinkwrap.json",
-    "postshrinkwrap": "git checkout -- npm-shrinkwrap.json"
+    "astro": "^7.0.6",
+    "sass": "^1.77.6"
   },
   "repository": "https://github.com/sn00m/leojwolf.com",
   "keywords": [],

@@ -1,0 +1,38 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ArtworkCard from '../components/ArtworkCard.astro';
+import { getCollection } from 'astro:content';
+
+const galleries = (await getCollection('galleries')).sort((a, b) => a.data.order - b.data.order);
+const art = await getCollection('art');
+---
+
+<BaseLayout title="Leo Wolf - Artwork">
+<section class="content-container">
+    <div id="art-page">
+        <h2>Artwork</h2>
+        <h2>By Collection</h2>
+        {galleries.map((gallery) => {
+            const pieces = art
+                .filter((piece) => piece.data.gallery === gallery.data.id)
+                .sort((a, b) => a.data.order - b.data.order);
+            return (
+                <Fragment>
+                    <h2>{gallery.data.title}</h2>
+                    <ul id={gallery.data.id}>
+                        {pieces.map((piece) => (
+                            <ArtworkCard
+                                name={piece.data.name}
+                                image={piece.data.image}
+                                type={piece.data.type}
+                                material={piece.data.material}
+                                size={piece.data.size}
+                            />
+                        ))}
+                    </ul>
+                </Fragment>
+            );
+        })}
+    </div>
+</section>
+</BaseLayout>

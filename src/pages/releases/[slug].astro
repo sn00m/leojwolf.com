@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BandcampEmbed from '../../components/BandcampEmbed.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const releases = await getCollection('releases');
+  return releases.map((release) => ({
+    params: { slug: release.id },
+    props: { release },
+  }));
+}
+
+const { release } = Astro.props;
+const { pageHeading, bandcampAlbumId, bandcampUrl, bandcampLinkText } = release.data;
+const { Content } = await render(release);
+---
+
+<BaseLayout title={`Leo Wolf - ${pageHeading}`}>
+<section class="content-container">
+    <div class="album-page">
+        <h2>{pageHeading}</h2>
+        <div class="album-container">
+            <BandcampEmbed albumId={bandcampAlbumId} url={bandcampUrl} linkText={bandcampLinkText} />
+            <div class="album-description">
+                <Content />
+            </div>
+        </div>
+    </div>
+</section>
+</BaseLayout>

@@ -1,0 +1,56 @@
+@import './breakpoints';
+@import './mixins';
+
+$primary-font-type: 'PT Serif', TimesNewRoman, Times, serif;
+
+// Global styles ---------------------------------
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    max-width: 100%;
+    background-size: cover;
+    background-color: rgb(27, 27, 27);
+    font-family: $primary-font-type;
+}
+
+.view-container {
+    @include lg {
+        display: grid;
+        grid-template-columns: 2fr 10fr;
+        width: 100%;
+    }
+
+    .nav-section {
+        @include lg {
+            grid-column: 1;
+        }
+    }
+
+    .content-section {
+        @include lg {
+            grid-column: 2;
+        }
+    }
+}
+
+a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+p {
+    color: rgb(255, 255, 255);
+}
+
+// Partials --------------------------------------
+@import 'partials/header';
+@import 'partials/nav';
+@import 'partials/home';
+@import 'partials/bio';
+@import 'partials/discography';
+@import 'partials/album';
+@import 'partials/art';
+@import 'partials/footer';
