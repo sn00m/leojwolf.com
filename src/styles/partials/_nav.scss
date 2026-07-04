@@ -1,4 +1,32 @@
 .nav-container {
+  position: relative;
+
+  .nav-toggle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: none;
+    border: none;
+    padding: 10px 0;
+    margin: 10px 0 10px 40px;
+    cursor: pointer;
+    @include lg {
+      display: none;
+    }
+
+    .nav-toggle-bar {
+      display: block;
+      width: 28px;
+      height: 3px;
+      background-color: rgb(255, 255, 255);
+    }
+
+    .nav-toggle-label {
+      color: rgb(255, 255, 255);
+      font-size: 1em;
+    }
+  }
+
   nav {
     ul {
       margin-left: 40px;
@@ -13,7 +41,7 @@
       color: rgb(255, 255, 255);
       list-style-type: none;
       display: block;
-      font-size: 3em;
+      font-size: 1.5em;
       @include lg {
         font-size: 0.8em;
         display: block;
@@ -37,6 +65,20 @@
     }
     li:last-child:after {
       content: "";
+    }
+  }
+
+  #nav-links {
+    display: none;
+    margin-bottom: 10px;
+
+    &.open {
+      display: block;
+    }
+
+    @include lg {
+      display: block;
+      margin-bottom: 0;
     }
   }
 }
