@@ -1,4 +1,10 @@
 <div class="nav-container">
+    <button id="nav-toggle" class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-label">Menu</span>
+    </button>
     <nav>
       <div id="nav-links">
         <ul>
@@ -21,3 +27,14 @@
       </div>
     </nav>
 </div>
+
+<script>
+  const toggle = document.getElementById('nav-toggle');
+  const links = document.getElementById('nav-links');
+
+  toggle?.addEventListener('click', () => {
+    const isOpen = links?.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', String(Boolean(isOpen)));
+    toggle.classList.toggle('open', Boolean(isOpen));
+  });
+</script>
