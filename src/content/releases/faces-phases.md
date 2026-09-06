@@ -7,8 +7,8 @@ format: Digital, CD
 label: The Oldest River
 coverImage: /assets/discog/FP_Album_Cover_Alternate.png
 bandcampAlbumId: "579280297"
-bandcampUrl: https://leowolf.bandcamp.com/album/veiled-in-light
-bandcampLinkText: Veiled in Light by Leo Wolf
+bandcampUrl: https://leowolf.bandcamp.com/album/faces-phases
+bandcampLinkText: Faces / Phases by Leo Wolf & dream trawler
 ---
 
 Cathartic metamorphosis
