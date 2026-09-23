@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const items = await getCollection('moonsDsp');
+  return items.map((item) => ({
+    params: { slug: item.id },
+    props: { item },
+  }));
+}
+
+const { item } = Astro.props;
+const { name, images, links } = item.data;
+const { Content } = await render(item);
+---
+
+<BaseLayout title={`Leo Wolf - ${name}`}>
+<section class="content-container">
+    <div class="moons-dsp-item-page">
+        <p class="back-link"><a href="/moons-dsp">&larr; moons DSP</a></p>
+        <h2>{name}</h2>
+        {images.length > 0 && (
+            <div class="item-photos">
+                {images.map((image) => (
+                    <img src={image.src} alt={image.alt} />
+                ))}
+            </div>
+        )}
+        <div class="item-description">
+            <Content />
+        </div>
+        {links.length > 0 && (
+            <ul class="item-links">
+                {links.map((link) => (
+                    <li><a href={link.url}>{link.label}</a></li>
+                ))}
+            </ul>
+        )}
+    </div>
+</section>
+</BaseLayout>

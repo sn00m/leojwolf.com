@@ -1,0 +1,39 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const items = (await getCollection('moonsDsp')).sort((a, b) => a.data.order - b.data.order);
+const sections = [
+  { title: 'Instruments', items: items.filter((item) => item.data.category === 'instrument') },
+  { title: 'Effects', items: items.filter((item) => item.data.category === 'effect') },
+].filter((section) => section.items.length > 0);
+---
+
+<BaseLayout title="Leo Wolf - moons DSP">
+<section class="content-container">
+    <div id="moons-dsp-page">
+        <h2>moons DSP</h2>
+        <div class="moons-dsp-intro">
+            <p>moons DSP develops audio software instruments and effects</p>
+        </div>
+        {sections.map((section) => (
+            <div class="moons-dsp-section">
+                <h3>{section.title}</h3>
+                <ul class="moons-dsp-list">
+                    {section.items.map((item) => (
+                        <li>
+                            <a href={`/moons-dsp/${item.id}`}>
+                                {item.data.coverImage && (
+                                    <img class="image" src={item.data.coverImage} alt={item.data.name} />
+                                )}
+                                <p class="item-name">{item.data.name}</p>
+                                <p class="item-summary">{item.data.summary}</p>
+                            </a>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+        ))}
+    </div>
+</section>
+</BaseLayout>

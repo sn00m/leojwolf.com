@@ -39,4 +39,17 @@ const galleries = defineCollection({
   }),
 });
 
-export const collections = { releases, art, galleries };
+const moonsDsp = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/moons-dsp' }),
+  schema: z.object({
+    name: z.string(),
+    category: z.enum(['instrument', 'effect']),
+    summary: z.string(),
+    coverImage: z.string().optional(),
+    images: z.array(z.object({ src: z.string(), alt: z.string() })).default([]),
+    links: z.array(z.object({ label: z.string(), url: z.string() })).default([]),
+    order: z.number(),
+  }),
+});
+
+export const collections = { releases, art, galleries, moonsDsp };
